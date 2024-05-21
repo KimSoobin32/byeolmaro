@@ -1,0 +1,285 @@
+@charset 'utf-8';
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+:root {
+  font-size: 62.5%;
+  --main-color: #3440ca;
+  --main-color-dark: #151949;
+  --title-color: #000;
+  --text-color: #666;
+  --white: #fff;
+  --bd: #8e8e8e;
+  --bd-bright: rgba(0, 0, 0, 0.1);
+  --line: #808080;
+  --bd2: #afafaf;
+}
+img {
+  max-width: 100%;
+  /* 아무리 커져도 본인 크기까지만 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+body {
+  font: 1.6rem/1.5 'Pretendard', sans-serif;
+  color: var(--title-color);
+  word-break: keep-all;
+  overflow-x: hidden;
+}
+.inner {
+  width: 151.4rem;
+  margin: 0 auto;
+  /* background: rgba(255, 255, 0, 0.3); */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+  /* background: #5f5; */
+}
+
+.logo a {
+  /* a까지 선택자 잡아야 전체 링크됨 (클릭 공간)*/
+  display: block;
+  width: 25.7rem;
+  height: 8.8rem;
+  background: url(../img/pc-logo.svg) no-repeat 50% / contain;
+}
+.gnb {
+  display: flex;
+  margin-left: auto; /* 왼쪽영역을 쭉 밀음... (오른쪽으로 밀려남) 스스로 정렬 */
+  /* background: #ff5; */
+}
+.gnb li a {
+  display: block;
+  padding: 0 3rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+/* .gnb li:last-child a {
+  padding-right: 0;
+} */
+#footer {
+  background: #000;
+  color: var(--white);
+  padding: 6.2rem 0 8.8rem 0;
+}
+.foot-wrap {
+  display: flex;
+}
+.foot-wrap strong {
+  display: block;
+  background: url(../img/logo-dark.svg) no-repeat 50%;
+  width: 23.4rem;
+  height: 16.4rem;
+}
+.foot-con {
+  /* background: skyblue; */
+  margin-left: 7.5rem;
+}
+
+.foot-con ul {
+  /* background: lightcoral; */
+  display: flex;
+}
+.foot-con ul li {
+  /* border: 1px solid #000; */
+  margin-right: 2.2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.contact {
+  margin-top: 2.7rem;
+}
+.contact dl {
+  /* background: #55f; */
+  display: flex;
+}
+.contact dl dt {
+  margin-right: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.contact dl dd {
+  margin-right: 3.5rem;
+  font-weight: 300;
+}
+.contact p:nth-of-type(1) {
+  margin-top: 1.2rem;
+}
+.contact p:nth-of-type(1) + p {
+  margin-top: 3rem;
+}
+.sns-wrap {
+  /* background: #55f; */
+  margin-left: auto;
+}
+.sns-wrap .sns-list {
+  display: flex;
+  gap: 2.3rem;
+  margin-bottom: 4rem;
+}
+.sns-wrap .sns-list li a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  background: no-repeat 50% / contain;
+}
+.sns-wrap .sns-list li:nth-child(1) a {
+  background-image: url(../img/foot-facebook.svg);
+}
+.sns-wrap .sns-list li:nth-child(2) a {
+  background-image: url(../img/foot-instagram.svg);
+}
+.sns-wrap .sns-list li:nth-child(3) a {
+  background-image: url(../img/foot-twitter.svg);
+}
+
+.family-site {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  outline: 0;
+  background: transparent;
+  color: #808080;
+  border: 1px solid #808080;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+/* .inner 크기에 맞는 분기점 추가 */
+@media (max-width: 1514px) {
+  .inner {
+    width: 74rem;
+    width: 72.265625%;
+    /* 740/1024*100 */
+    /* background: lightblue; */
+  }
+  .gnb {
+    display: none;
+  }
+  .btn-menu {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    /* background: url(../img/menu.svg) no-repeat 50% /60% auto; */
+    /* /60% auto : 4.8기준 크기 조절.. auto는 비율 유지 */
+
+    background: url(../img/menu.svg) no-repeat 50% / 70% auto;
+  }
+  .foot-wrap {
+    flex-direction: column;
+  }
+  .sns-wrap {
+    margin-left: 7.5rem;
+    margin-top: 6rem;
+  }
+  .contact dl {
+    /* flex-direction: column; */
+    width: 250px;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+  }
+
+  .contact p:nth-of-type(1) + p {
+    font-size: 1.4rem;
+  }
+
+  .tel {
+    margin-right: 10rem !important;
+  }
+}
+
+/* 태블릿 디자인 */
+@media (max-width: 1024px) {
+  .logo a {
+    background-image: url(../img/tablet-logo.svg);
+    width: 9.3rem;
+    height: 6.6rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .foot-con ul {
+    flex-direction: row;
+    width: 32rem;
+    flex-wrap: wrap;
+    row-gap: 1.2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .foot-con {
+    margin-left: 0;
+  }
+  .foot-wrap strong {
+    margin-left: -7rem;
+  }
+  .sns-wrap {
+    margin-left: 0;
+  }
+}
+
+/* 모바일 디자인 */
+/* @media (max-width: 400px) { */
+@media (max-width: 500px) {
+  .inner {
+    width: 350px;
+    width: 87.5%;
+    /* 350/400*100 */
+  }
+  .logo a {
+    object-fit: contain;
+    width: 6.3rem;
+    /* height: 4.4rem; */
+  }
+  .btn-menu {
+    width: 3rem;
+  }
+
+  .foot-con ul {
+    flex-direction: row;
+    width: 26rem;
+    flex-wrap: wrap;
+    row-gap: 1.2rem;
+  }
+  .foot-con ul li {
+    font-size: 1.3rem;
+  }
+  .contact dl dt {
+    font-size: 1.2rem;
+  }
+  .contact dl {
+    font-size: 1.2rem;
+    width: 22rem;
+  }
+  .contact p:nth-of-type(1) {
+    font-size: 1.2rem;
+  }
+  .contact p:nth-of-type(1) + p {
+    font-size: 1.2rem;
+  }
+
+  /* .sns-wrap {
+    margin-left: 0;
+  } */
+  .sns-wrap .sns-list li a {
+    width: 3rem;
+  }
+}

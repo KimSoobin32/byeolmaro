@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>별마로 천문대</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <a href="#container" class="skip hidden">본문 바로가기</a>
+  <hr>
+  <!-- s: header -->
+  <header id="header">
+    <div class="inner">
+      <nav class="nav">
+        <h1 class="logo"><a href="./index.html"><i class="hidden">별마로 천문대</i></a></h1>
+        <ul class="gnb">
+          <li>
+            <a href="./introduce.html">별마로 천문대 소개</a>
+            <ul class="submenu">
+              <li><a href="#">천문대 소개</a></li>
+              <li><a href="#">오시는 길</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="./facility.html">천문대 이용안내</a>
+            <ul class="submenu">
+              <li><a href="#">시설 소개</a></li>
+              <li><a href="#">이용료 안내</a></li>
+              <li><a href="#">관람 시간표</a></li>
+              <li><a href="#">이달의 별자리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">교육관 이용안내</a>
+            <ul class="submenu">
+              <li><a href="#">시설 소개</a></li>
+              <li><a href="#">이용 안내</a></li>
+              <li><a href="#">프로그램 소개</a></li>
+              <li><a href="#">이용객 준수사항</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">천문대 예매</a>
+            <ul class="submenu">
+              <li><a href="#">예매하기</a></li>
+              <li><a href="#">예매 확인/취소</a></li>
+              <li><a href="#">환불 안내</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="#">참여마당</a>
+            <ul class="submenu">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">자주하는 질문</a></li>
+              <li><a href="#">묻고 답하기</a></li>
+              <li><a href="#">방문후기</a></li>
+              <li><a href="#">자유사진</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn-menu">
+          <i class="hidden">menu</i>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <hr>
+  <!-- e: header  -->
+
+
+  <main id="container">
+    <!-- s: 비주얼 영역 -->
+    <section class="visual">
+
+      <div class="visual-wrap">
+        <div class="visual-slide">
+          <div class="visual-title">
+            <h2>별을 보는 고요한 정상,<strong>별마로 천문대</strong></h2>
+            <p>별마로 천문대는 시민천문대 최상의 관측조건인
+              해발 799.8m에 자리하고 있으며 여러망원경이 설치되어 있어
+              달이나 행성, 별을 관측할 수 있습니다.</p>
+          </div>
+          <figure class="visual-slide-item"><img src="./img/main-visual.png" alt=""></figure>
+        </div>
+
+        <a href="#" class="btn btn-prev">이전</a>
+        <a href="#" class="btn btn-next">다음</a>
+      </div>
+    </section>
+    <!-- //e: 비주얼 영역 -->
+
+    <!-- s: 주요정보 요약 영역 -->
+    <section class="key-info">
+      <div class="inner">
+        <h3 class="hidden">주요 정보 요약</h3>
+        <ul class="key-info-list">
+          <li>
+            <dl>
+              <dt>위치</dt>
+              <dd>강원특별자치도 영월군 영월읍<br>
+                천문대길 397</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>관람 시간</dt>
+              <dd>하절기(4월~9월) 15:00~23:00<br>
+                동절기(10월~3월) 14:00~22:00</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>이용 요금</dt>
+              <dd>일반 7000원<br>
+                경로(만 65세 이상) 3500원</dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- //e: 주요정보 요약 영역 -->
+
+    <!-- s: 오늘의 날씨/온라인예매 바로가기 영역 -->
+    <section class="weather-reserve">
+      <div class="inner">
+        <h3 class="hidden">오늘의 날씨 및 온라인예매</h3>
+        <div class="weather">
+          <div class="today-info">
+            <div class="today">
+              <h4>
+                <span>오늘의</span>
+                <strong>날씨</strong>
+              </h4>
+              <time datetime="2024-03-25">2024.03.25(월)</time>
+            </div>
+            <div class="weather-info">
+              <div class="temperature">
+                <figure>
+                  <img src="./img/cloudy.svg" alt="">
+                  <figcaption>흐림</figcaption>
+                </figure>
+                <div class="celsius">
+                  <strong>15<i>ºC</i></strong>
+                  <span>20ºC / 10ºC</span>
+                </div>
+
+              </div>
+              <div class="more-info">
+                <dl>
+                  <dt>내일 날씨</dt>
+                  <dd>20ºC
+                    <strong class="weather-icon"><img src="./img/sunny.svg" alt=""><i class="hidden">맑음</i></strong>
+                  </dd>
+                  <dt>일몰 시간</dt>
+                  <dd>18:47</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="reserve">
+          <a href="#">
+            <div class="reserve-wrap">
+              <strong class="telescope"><i class="hidden">망원경</i></strong>
+              <p>별마로 천문대 <strong>온라인 예매 바로가기</strong>
+                <span>※별마로 천문대는 사전예약제로 운영하고 있습니다.</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- //e: 오늘의 날씨/온라인예매 바로가기 영역 -->
+
+    <!-- s: 별마로 천문대 이용 안내 영역 -->
+    <section class="use-guide">
+      <div class="inner">
+        <h3 class="sec-title">별마로 천문대 이용 안내</h3>
+        <div class="tab">
+          <div class="tab-menu">
+            <a href="#" class="active">천문대 이용안내</a>
+            <a href="#">교육관 이용안내</a>
+          </div>
+          <div class="tab-contents">
+            <div>
+              <ul class="con-list">
+                <li>
+                  <a href="#">
+                    <figure><img src="./img/use-guide1.png" alt=""></figure>
+                    <div class="guide-con">
+                      <p>시설 안내</p>
+                    </div>
+                    <strong class="icon"><img src="./img/icon-observatory.svg" alt=""></strong>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <figure><img src="./img/use-guide2.jpg" alt=""></figure>
+                    <div class="guide-con">
+                      <p>이용 요금 안내</p>
+                    </div>
+                    <strong class="icon"><img src="./img/icon-won.svg" alt=""></strong>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <figure><img src="./img/use-guide3.jpg" alt=""></figure>
+                    <div class="guide-con">
+                      <p>관람 시간 안내</p>
+                    </div>
+                    <strong class="icon"><img src="./img/icon-clock.svg" alt=""></strong>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <figure><img src="./img/use-guide4.jpg" alt=""></figure>
+                    <div class="guide-con">
+                      <p>이달의 별자리</p>
+                    </div>
+                    <strong class="icon"><img src="./img/icon-star.svg" alt=""></strong>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- //e: 별마로 천문대 이용 안내 영역 -->
+
+
+    <!-- s: 공지사항 영역 -->
+    <section class="notice">
+      <div class="inner">
+        <div class="sec-tit-wrap">
+          <h3 class="sec-title">공지사항</h3>
+          <a href="#" class="btn-plus"><i class="hidden">공지사항으로 이동</i></a>
+        </div>
+        <ul class="notice-list">
+          <li>
+            <a href="#">
+              <div class="badge-category">공지</div>
+              <dl>
+                <dt>별마로천문대 하절기 운영 안내</dt>
+                <dd>4월 2일부터 하절기로 운영시간이 변경됩니다. 개관은 15시이며 1회차 프로그램은 15시 30분, 2회차 프로그램은 20시 ...</dd>
+              </dl>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="badge-category">공지</div>
+              <dl>
+                <dt>별마로천문대 야외시설물 이용제한 안내</dt>
+                <dd>코로나19의 위험을 염려하여 야외 숙박을 하시는 경우가 많습니다. 특히 자동차를 이용(차박, 캠핑카)한 숙박 및 캠핑이 증가 ...</dd>
+              </dl>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="badge-category">이벤트</div>
+              <dl>
+                <dt>2023 별마로천문대 대한민국 밤밤곡곡 100 선정 SNS 이벤트</dt>
+                <dd>2023년 대한민국 밤밤곡곡 100선에 별마로천문대가 선정되었습니다. 천문대에 다녀가시면서 추억도 만들고 선물도 받아가실 ...</dd>
+              </dl>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+    <!-- //e: 공지사항 영역 -->
+
+    <!-- s: 방문후기 영역 -->
+    <section class="review">
+      <div class="inner">
+        <div class="sec-tit-wrap">
+          <h3 class="sec-title">방문후기</h3>
+          <a href="#" class="btn-plus"><i class="hidden">방문후기로 이동</i></a>
+        </div>
+        <ul class="review-list">
+          <li>
+            <span class="bookmark"><img src="./img/bookmark.png" alt=""><i class="hidden">집중!</i></span>
+            <a href="#">
+              <img src="./img/review-star.svg" alt="">
+              <h4>예상외로 신나는
+                경험이었어요!</h4>
+              <strong>jwe06120</strong>
+              <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도 없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 </p>
+            </a>
+          </li>
+          <li>
+            <span class="bookmark"><img src="./img/bookmark.png" alt=""><i class="hidden">집중!</i></span>
+            <a href="#">
+              <img src="./img/review-star.svg" alt="">
+              <h4>예상외로 신나는
+                경험이었어요!</h4>
+              <strong>jwe06120</strong>
+              <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도 없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 </p>
+            </a>
+          </li>
+          <li>
+            <span class="bookmark"><img src="./img/bookmark.png" alt=""><i class="hidden">집중!</i></span>
+            <a href="#">
+              <img src="./img/review-star.svg" alt="">
+              <h4>예상외로 신나는
+                경험이었어요!</h4>
+              <strong>jwe06120</strong>
+              <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도 없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 </p>
+            </a>
+          </li>
+          <li>
+            <span class="bookmark"><img src="./img/bookmark.png" alt=""><i class="hidden">집중!</i></span>
+            <a href="#">
+              <img src="./img/review-star.svg" alt="">
+              <h4>예상외로 신나는
+                경험이었어요!</h4>
+              <strong>jwe06120</strong>
+              <p>계절이 지나가는 하늘에는 가을로 가득 차 있습니다. 나는 아무 걱정도 없이 가을 속의 별들을 다 헬 듯합니다. 가슴 속에 하나 </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- //e: 방문후기 영역 -->
+
+    <!-- s: 에필로그 영역 -->
+    <section class="epilogue">
+      <div class="epilogue-wrap">
+        <h4>우주의 신비로 안내하는 여행의 시작!</h4>
+        <div class="btn-wrap">
+          <a href="#" class="btn-basic">천문대 소개</a>
+          <a href="#" class="btn-basic">오시는 길</a>
+        </div>
+      </div>
+    </section>
+    <!-- //e:  에필로그 영역 -->
+
+  </main>
+  <hr>
+
+  <footer id="footer">
+    <div class="inner">
+      <div class="foot-wrap">
+        <strong><i class="hidden">별마로천문대</i></strong>
+
+        <div class="foot-con">
+          <ul>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">저작권보호정책</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">cctv 설치 및 운영지침</a></li>
+          </ul>
+
+          <div class="contact">
+            <dl>
+              <dt>상호</dt>
+              <dd>영월군시설관리공단</dd>
+
+              <dt>사업자등록번호</dt>
+              <dd>225-82-18099</dd>
+
+              <dt>Tel</dt>
+              <dd class="tel">033-372-8445</dd>
+
+              <dt>Fax</dt>
+              <dd>033-374-7463</dd>
+            </dl>
+            <p>※ 전화문의는 운영시간에만 가능합니다.</p>
+            <p>Copyright 2010 YeongWolgun FacilitiesManagement Corporation. All rights reserved</p>
+          </div>
+        </div>
+
+        <div class="sns-wrap">
+          <ul class="sns-list">
+            <li><a href="#"><i class="hidden">facebook</i></a></li>
+            <li><a href="#"><i class="hidden">instagram</i></a></li>
+            <li><a href="#"><i class="hidden">twitter</i></a></li>
+          </ul>
+
+          <select name="#" id="#" class="family-site">
+            <option value="">관련사이트</option>
+            <option value="">영월군시설관리공단</option>
+            <option value="">영월군</option>
+            <option value="">기상청</option>
+            <option value="">영월박물관포털사이트</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,691 @@
+.sub-visual {
+  height: 40rem;
+  background: #000 url(../img/sub-visual-facility.jpg) no-repeat 0 0 / cover;
+  position: relative;
+}
+.sub-visual.introduce {
+  background: #000 url(../img/introduce-visual.png) no-repeat 50% / cover;
+}
+
+.sub-visual::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.sub-visual .sub-title h2 {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 5rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.breadcrumb ul li .home-icon {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(../img/home.svg) no-repeat 50% / contain;
+  margin-bottom: 5px;
+}
+
+.breadcrumb ul {
+  display: flex;
+  gap: 2.2rem;
+  gap: 1.145833333333333vw;
+  align-items: center;
+  padding-top: 9rem;
+  padding-top: 5.9445%;
+  /* 90/1514*100 */
+  /* background-color: #eee; */
+  font-size: 2rem;
+}
+
+.breadcrumb ul li + li:before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2.2rem;
+  margin-right: 1.145833333333333vw;
+  /* 22/1920*100 */
+  background: url(../img/arrow.svg) no-repeat 50% / contain;
+}
+
+.breadcrumb ul li a:hover {
+  text-decoration: underline;
+}
+
+/* s: facility */
+.facility-wrap {
+  padding: 16.8rem 0 26.5rem 0;
+  padding: 8.75% 0 13.80208333333333% 0;
+  /* 265/1920*100 */
+  /* background: lightgray; */
+}
+
+/* .facility-wrap  */
+.sec-title {
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.tab-menu {
+  /* background: lightblue; */
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  margin-top: 6.605%;
+  /* 100/1514*100 */
+}
+.tab-menu a {
+  padding: 2.5rem 10rem;
+  padding: 1.651254953764861% 6.605019815059445%;
+  /* 100/1514*100 */
+  border: 1px solid var(--bd);
+  background: var(--white);
+  font-size: 2.3rem;
+  margin-left: -1px;
+}
+.tab-menu a.active {
+  background: var(--main-color);
+  color: var(--white);
+}
+
+.tab-menu a:not(.active):hover {
+  background: rgba(52, 64, 202, 0.2);
+  color: var(--main-color-dark);
+}
+
+.tab-menu a:first-child {
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+}
+.tab-menu a:last-child {
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+
+.tab-content {
+  /* background: lightblue; */
+  display: flex;
+  margin-top: 13rem;
+  margin-top: 8.5865%;
+  margin-top: 9.5865%;
+  /* 130/1514*100 */
+}
+.tab-content .pic {
+  width: 74rem;
+  width: 48.87714663143989%;
+  /* 740/1514*100 */
+}
+.tab-content .pic figure {
+  /* height: 56.6rem; */
+  width: 100%;
+  aspect-ratio: 1/0.7648648648648649;
+  /* 566/740 */
+}
+.tab-content .pic figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tab-content .pic div {
+  display: flex;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.tab-content .pic div span {
+  /* display: inline-block; */
+  width: 20rem;
+  width: 27.02702702702703%;
+  /* 200/740*100 */
+  flex-shrink: 0;
+  margin-right: 2.8rem;
+  margin-right: 3.7838%;
+  /* 28/740*100 */
+}
+.tab-content .pic div span img {
+  border-radius: 0.5rem;
+}
+
+.tab-content .content {
+  /* margin-left: 11.8rem; */
+  /* background: lightcoral; */
+  padding: 6.3rem 0 4rem 11.8rem;
+  padding: 4.1612% 0 2.642007926023778% 7.793923381770145%;
+  /* 118/1514*100 */
+}
+.tab-content .content h4 {
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+.tab-content .content .equipment {
+  margin-top: 1rem;
+}
+.badge-category {
+  background: var(--main-color);
+  /* width: 8rem; */
+  height: 4rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--white);
+  border-radius: 4rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  margin-top: 9rem;
+  margin-top: 19.86754966887417%;
+  /* 90/453*100 */
+}
+
+.equipment ul li dl dt {
+  font-weight: 600;
+  font-size: 2.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+.equipment ul li dl dt::before {
+  content: ''; /* 가상 요소를 사용하여 점 생성 */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px; /* 점의 크기 조정 */
+  height: 5px; /* 점의 크기 조정 */
+  background-color: var(--main-color);
+  border-radius: 50%; /* 원 모양의 점을 만들기 위해 반지름 설정 */
+}
+.equipment ul li dl dd {
+  color: #666;
+  font-size: 2rem;
+  margin-left: 1.7rem;
+  margin-top: 0.3rem;
+}
+
+.feature ul {
+  font-size: 2.5rem;
+  margin-top: 2.4rem;
+}
+
+.feature ul li {
+  position: relative; /* 각 항목에 점을 위치시키기 위해 상대 위치 지정 */
+  padding-left: 1.5rem; /* 점과 텍스트 사이 간격 조정 */
+}
+
+.feature ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+/* e: pc facility */
+
+/* s: pc 천문대 소개 */
+.meaning {
+  /* background: lightblue; */
+  padding: 12.5rem 0 14.270833% 0;
+  /* padding: 6.5104% 0 27.4rem 0; */
+  /* 274/1920*100 */
+  text-align: center;
+}
+.meaning h3 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin-bottom: 10rem;
+  margin-bottom: 6.605%;
+  /* 100/1514*100 */
+}
+/* .meaning figure img {
+   width: 65.3rem; 
+   width: 43.1308%; 
+
+} */
+.meaning p {
+  font-size: 2.5rem;
+  width: 57rem;
+  width: 37.6486%;
+  /* 570/1514*100 */
+  display: inline-block;
+  margin-top: 9rem;
+  margin-top: 5.9445%;
+  /* 90/1514*100 */
+}
+
+.speciality h3 {
+  font-weight: 500;
+  font-size: 4.6rem;
+  text-align: center;
+}
+.speciality article {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18rem;
+  margin-top: 11.889%;
+  /* 180/1514*100 */
+}
+.speciality h3 + article {
+  /* h3의 가장 가까운 형제article */
+  margin-top: 11.4rem;
+  margin-top: 7.5297%;
+  /* 114/1514*100 */
+}
+.speciality h3 + article + article {
+  flex-direction: row-reverse; /* fxdrr 행의 반대.. 전환*/
+}
+.speciality article .pic {
+  width: 68rem;
+  width: 44.9141%;
+}
+
+.speciality article .pic figure img {
+  width: 100%;
+  height: 100%;
+}
+.speciality article .con {
+  width: 74.2rem;
+  width: 49.0092%;
+  /* 742/1514*100 */
+  /* background: #5f5; */
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.speciality article .con h4 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+.speciality article .con p {
+  font-size: 2.5rem;
+  margin-top: 3.2rem;
+}
+
+.state {
+  /* background: lightgreen; */
+  padding: 38.4rem 0 32rem 0;
+  padding: 27.5% 0;
+  /* 384/1024*100 */
+}
+.state figure {
+  margin-top: 6.7rem;
+  width: 100%;
+}
+.state figure img {
+  width: 100%;
+}
+
+.key-info-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7.5rem;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+.key-info-list li {
+  /* width: 33.333%; */
+
+  width: 35.3rem;
+  flex: 1 0 35.3rem;
+  /* flex: 0 0 23.31571994715984%; */
+  /* 353/1514*100 */
+  /* aspect-ratio: 1/0.7818696883852691; */
+  /* 276/353 */
+  display: flex;
+  /* border: 1px solid var(--bd-bright); */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  padding: 4rem 5.4rem;
+  gap: 2.7rem;
+  position: relative;
+  flex-direction: column;
+  background: var(--white);
+  align-items: center;
+  text-align: center;
+}
+
+.key-info-list li::before {
+  content: '';
+  display: block;
+  width: 4.8rem;
+  height: 4.8rem;
+  background: no-repeat 50% / contain;
+}
+.key-info-list li:nth-child(1)::before {
+  background-image: url(../img/state1.png);
+}
+.key-info-list li:nth-child(2)::before {
+  background-image: url(../img/state2.png);
+}
+.key-info-list li:nth-child(3)::before {
+  background-image: url(../img/state3.png);
+}
+.key-info-list li:nth-child(4)::before {
+  background-image: url(../img/state4.png);
+}
+
+.key-info-list li dl dt {
+  font-weight: 600;
+  font-size: 3rem;
+}
+.key-info-list li dl dd {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+/* e: pc 천문대 소개 */
+
+@media (max-width: 1514px) {
+  /* s: facility */
+  .tab-content {
+    flex-direction: column-reverse;
+    /* background: lightblue; */
+  }
+  .tab-content .content {
+    padding: 0;
+  }
+
+  .badge-category {
+    margin-top: 12.8675%;
+    margin-top: 7.8675%;
+  }
+  .equipment ul li dl dt {
+    font-size: 2.3rem;
+  }
+  .equipment ul li dl dd {
+    font-size: 1.8rem;
+  }
+  .feature ul {
+    font-size: 2.3rem;
+  }
+  .tab-content .pic {
+    margin-top: 17.4rem;
+    margin-top: 23.5135%;
+    /* 174/740*100 */
+    width: 100%;
+  }
+  .tab-content .pic figure {
+    width: 74rem;
+    width: 67.64168190127971%;
+    aspect-ratio: 1 / 0.7648648648648649;
+    margin: 0 auto;
+  }
+  .tab-content .pic div {
+    width: 74rem;
+    width: 67.64168190127971%;
+    /* 740/1094*100 */
+    margin: 2rem auto 0 auto;
+  }
+  /* e: facility */
+}
+
+@media (max-width: 1220px) {
+  /* s: facility */
+  .tab-menu a {
+    font-size: 2rem;
+  }
+  /* e: facility */
+}
+
+@media (max-width: 1160px) {
+  /* s: facility */
+  .tab-menu a {
+    padding: 2rem 5.8rem;
+    padding: 2.702702702702703% 7.837837837837838%;
+    /* 58/740*100 */
+    font-size: 1.6rem;
+  }
+  /* e: facility */
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  /* s: facility */
+  .sub-visual .sub-title h2 {
+    font-size: 4.5rem;
+    text-align: center;
+  }
+  .breadcrumb ul {
+    font-size: 1.5rem;
+  }
+  .breadcrumb ul li .home-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .breadcrumb ul li + li:before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .facility-wrap .sec-title {
+    font-size: 3rem;
+  }
+  .tab-content .content h4 {
+    font-size: 3.2rem;
+  }
+  .tab-menu a {
+    padding: 2rem 5.8rem;
+    padding: 2.702702702702703% 6.837837837837838%;
+    /* 58/740*100 */
+    font-size: 1.6rem;
+  }
+  .tab-content {
+    flex-direction: column-reverse;
+  }
+  .tab-content .content {
+    padding: 0;
+  }
+  .tab-content .pic {
+    margin-top: 17.4rem;
+    margin-top: 23.5135%;
+    /* 174/740*100 */
+    width: 100%;
+  }
+  .equipment ul li dl dt {
+    font-size: 2.3rem;
+  }
+  .equipment ul li dl dd {
+    font-size: 1.8rem;
+  }
+  .feature ul {
+    font-size: 2.3rem;
+  }
+  /* e: facility */
+
+  /* s: 천문대 소개 */
+  .meaning h3 {
+    font-size: 3rem;
+  }
+  .meaning figure img {
+    width: 50rem;
+  }
+  .meaning p {
+    font-size: 1.5rem;
+    width: 46.6486%;
+  }
+  .speciality h3 {
+    font-size: 3rem;
+  }
+  .speciality article .con h4 {
+    font-size: 2rem;
+  }
+  .speciality article .con p {
+    font-size: 1.5rem;
+    margin-top: 1.7rem;
+  }
+  .sec-title {
+    font-size: 3rem;
+  }
+  .key-info-list {
+    flex-wrap: wrap;
+    /* row-gap: 4rem; */
+    margin-top: 6rem;
+    /* justify-content: center; */
+  }
+  .key-info-list li dl dt {
+    font-size: 2.5rem;
+  }
+  .key-info-list li dl dd {
+    font-size: 1.5rem;
+  }
+
+  /* e: 천문대 소개 */
+}
+
+@media (max-width: 840px) {
+  /* s: facility */
+  .facility-wrap {
+    padding-top: 15.75%;
+  }
+  .tab-menu {
+    flex-wrap: wrap;
+  }
+  .tab-menu a {
+    width: 50%;
+
+    padding: 1.8rem 0;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .tab-menu a:nth-child(1) {
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 0;
+  }
+  .tab-menu a:nth-child(2) {
+    border-top-right-radius: 4rem;
+  }
+  .tab-menu a:nth-child(3) {
+    border-bottom-left-radius: 4rem;
+    margin-top: -1px;
+  }
+  .tab-menu a:nth-child(4) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4rem;
+    margin-top: -1px;
+  }
+  /* e: facility */
+}
+
+/* 모바일 */
+/* @media (max-width: 400px) { */
+@media (max-width: 500px) {
+  /* s: facility */
+  .sub-visual .sub-title h2 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .facility-wrap .sec-title {
+    font-size: 2.2rem;
+  }
+  .tab-menu a {
+    padding: 1.2rem 0;
+    font-size: 1.5rem;
+  }
+
+  .tab-content .content h4 {
+    font-size: 2.5rem;
+  }
+  .badge-category {
+    font-size: 1.3rem;
+    height: 2.8rem;
+    padding: 0.6rem 1.5rem;
+  }
+  .equipment ul li dl dt {
+    font-size: 1.8rem;
+  }
+  .equipment ul li dl dd {
+    font-size: 1.5rem;
+  }
+  .feature ul {
+    font-size: 1.8rem;
+  }
+  .tab-content .pic figure {
+    width: 100%;
+  }
+  .tab-content .pic div {
+    width: 100%;
+  }
+  /* e: facility */
+  /* s:tablet 천문대 소개 */
+  .meaning h3 {
+    font-size: 2.5rem;
+  }
+  .meaning p {
+    width: 31.2rem;
+    /* width: 76.6486%; */
+  }
+  .speciality article .pic {
+    width: 100%;
+  }
+  .speciality h3 {
+    font-size: 2rem;
+  }
+  .speciality article {
+    display: block;
+  }
+
+  .speciality article .con {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .speciality article .con p {
+    margin-top: 1rem;
+  }
+  .sec-title {
+    font-size: 2rem;
+  }
+  .state figure {
+    /* width: 35rem; */
+    width: 100%;
+    height: 15rem;
+  }
+  .state figure img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .key-info-list {
+    justify-content: center;
+    margin-top: 6rem;
+  }
+  .key-info-list li {
+    flex: 0 0 100%;
+    /* height: 15.4rem; */
+    padding: 2rem 5.4rem;
+    gap: 0.5rem;
+  }
+  .key-info-list li dl dt {
+    font-size: 2rem;
+  }
+  .key-info-list li dl dd {
+    height: 4.6rem;
+  }
+  /* e:tablet 천문대 소개 */
+}
+
+@media (max-width: 400px) {
+}
+
+@media (max-width: 390px) {
+  /* s: facility */
+  .tab-menu a {
+    font-size: 1.5rem;
+  }
+  /* e: facility */
+}
