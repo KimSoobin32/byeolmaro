@@ -150,6 +150,9 @@ header.hide {
   position: relative;
   padding-top: 100px;
 }
+.visual-wrap {
+  position: relative;
+}
 
 .visual-title {
   position: absolute;
