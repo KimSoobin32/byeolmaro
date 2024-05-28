@@ -56,7 +56,7 @@ header {
   left: 0;
   width: 100%;
   transition: 0.3s;
-  z-index: 1;
+  z-index: 10;
 }
 .nav {
   display: flex;
@@ -97,12 +97,7 @@ header {
 .gnb > li {
   position: relative;
 }
-/* .gnb > li.on {
 
-} */
-/* .gnb li:last-child a {
-  padding-right: 0;
-} */
 /* 펼쳐질 메뉴의 바탕 */
 header::after {
   content: '';
@@ -140,6 +135,7 @@ header.hide {
   /* background: #333; */
   /* color: #fff; */
   font-weight: 400;
+  font-size: 1.8rem;
   color: #555555;
 }
 .submenu li a:hover {

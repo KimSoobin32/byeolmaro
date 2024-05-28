@@ -46,7 +46,16 @@ body {
   margin: 0 auto;
   /* background: rgba(255, 255, 0, 0.3); */
 }
-
+header {
+  background: #fff;
+  /* color: #fff; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  z-index: 10;
+}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -57,25 +66,73 @@ body {
 
 .logo a {
   /* a까지 선택자 잡아야 전체 링크됨 (클릭 공간)*/
+  position: relative;
   display: block;
   width: 25.7rem;
   height: 8.8rem;
   background: url(../img/pc-logo.svg) no-repeat 50% / contain;
+  z-index: 10;
 }
 .gnb {
   display: flex;
   margin-left: auto; /* 왼쪽영역을 쭉 밀음... (오른쪽으로 밀려남) 스스로 정렬 */
   /* background: #ff5; */
+  z-index: 10;
 }
-.gnb li a {
+.gnb > li > a {
   display: block;
   padding: 0 3rem;
   font-weight: 700;
   font-size: 2rem;
+  text-align: center;
 }
-/* .gnb li:last-child a {
-  padding-right: 0;
-} */
+.gnb > li {
+  position: relative;
+}
+/* 펼쳐질 메뉴의 바탕 */
+header::after {
+  content: '';
+  position: absolute;
+  top: -400px;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  /* background: #00f; */
+  background: #fff;
+  transition: 0.5s;
+}
+header.active::after {
+  top: 0;
+}
+header.hide {
+  top: -100px;
+}
+.submenu {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 100%;
+  /* jQuery 동작을 만들기 위한 준비 
+  op0은 클래스 줬다뺐다할때 씀
+  그 이외는 dn 사용 */
+  display: none;
+  padding-top: 30px;
+}
+.submenu li a {
+  display: block;
+  /* border: 1px solid #ff0; */
+  padding: 10px;
+  text-align: center;
+  /* background: #333; */
+  /* color: #fff; */
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #555555;
+}
+.submenu li a:hover {
+  color: var(--main-color);
+}
+
 #footer {
   background: #000;
   color: var(--white);
