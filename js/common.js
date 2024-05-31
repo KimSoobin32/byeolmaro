@@ -38,11 +38,10 @@ $(function () {
     }
   });
 
-  //swiper.js
+  // swiper.js
   const visualSlider = new Swiper('.visual-slider', {
-    // Optional parameters
     autoplay: {
-      delay: 5000,
+      delay: 1000,
     },
     loop: true,
 
@@ -56,6 +55,25 @@ $(function () {
     navigation: {
       nextEl: '.btn-next',
       prevEl: '.btn-prev',
+    },
+  });
+
+  const reviewList = new Swiper('.review-list', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    // centeredSlides: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   });
 });

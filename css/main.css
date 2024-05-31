@@ -181,7 +181,7 @@ header.hide {
 
   object-fit: cover;
 }
-.visual-slider .btn {
+.visual-slider-wrap .btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -192,25 +192,28 @@ header.hide {
   /* 텍스트 날리기 */
   text-indent: -999px; /* 들여쓰기 */
   overflow: hidden; /* 70영역 넘치면 숨김 */
+
   z-index: 10;
 }
-.visual-slider .btn.btn-prev {
+.visual-slider-wrap .btn.btn-prev {
   left: 40px;
   background-image: url(../img/prev.svg);
 }
-.visual-slider .btn.btn-next {
+.visual-slider-wrap .btn.btn-next {
   right: 40px;
   background-image: url(../img/next.svg);
 }
+
 .visual-slider .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
-  backface-visibility: #fff;
+  background: #fff;
   margin: 0 20px !important;
 }
 .visual-slider .swiper-pagination-bullet-active {
-  background: #ffd600;
+  background: var(--swiper-theme-color);
 }
+
 .visual-slider .swiper-pagination {
   bottom: 30px;
 }
@@ -684,19 +687,38 @@ header.hide {
   background-image: url(../img/icon-plus-black.svg);
 }
 
-.review-list {
-  /* background: skyblue; */
+.review-list-wrap {
   margin-top: 9rem;
-  display: flex;
-  justify-content: space-between;
-}
-.review-list li {
   position: relative;
-
   overflow: hidden;
+}
+
+/* .review-list {
+  background: tomato;
+
+} */
+.review-list .swiper-slide {
+  /* border: 1px solid #000; */
+  width: 353px !important;
+  aspect-ratio: 1/1.2;
+  transition: 0.4s;
+
+  margin-top: 1rem; /* 추가된 공간 확보 */
+}
+.review-list .swiper-slide > div {
+  position: relative;
   transition: 0.4s;
 }
-.review-list li .bookmark {
+
+.review-list-wrap .swiper-pagination {
+  z-index: 10;
+}
+.review-list-wrap .swiper-button-prev,
+.review-list-wrap .swiper-button-next {
+  z-index: 10;
+}
+
+.review-list .swiper-slide .bookmark {
   display: block;
   position: absolute;
   right: 3rem;
@@ -707,19 +729,16 @@ header.hide {
   transition: 0.5s;
 }
 
-.review-list li:hover {
+.review-list .swiper-slide:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transform: translateY(-1rem);
 }
-.review-list li:hover .bookmark {
+.review-list .swiper-slide:hover .bookmark {
   opacity: 1;
   top: 0;
 }
-.review-list li {
-  width: 23.3157%;
-  /* 353/1514*100 */
-}
-.review-list li a {
+
+.review-list .swiper-slide a {
   display: block;
   border: 1px solid var(--bd-bright);
   background: var(--white);
