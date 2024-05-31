@@ -146,7 +146,7 @@ header.hide {
   position: relative;
   padding-top: 100px;
 }
-.visual-wrap {
+.visual-slider-wrap {
   position: relative;
 }
 
@@ -181,7 +181,7 @@ header.hide {
 
   object-fit: cover;
 }
-.visual-wrap .btn {
+.visual-slider .btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -192,15 +192,29 @@ header.hide {
   /* 텍스트 날리기 */
   text-indent: -999px; /* 들여쓰기 */
   overflow: hidden; /* 70영역 넘치면 숨김 */
+  z-index: 10;
 }
-.visual-wrap .btn.btn-prev {
+.visual-slider .btn.btn-prev {
   left: 40px;
   background-image: url(../img/prev.svg);
 }
-.visual-wrap .btn.btn-next {
+.visual-slider .btn.btn-next {
   right: 40px;
   background-image: url(../img/next.svg);
 }
+.visual-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  backface-visibility: #fff;
+  margin: 0 20px !important;
+}
+.visual-slider .swiper-pagination-bullet-active {
+  background: #ffd600;
+}
+.visual-slider .swiper-pagination {
+  bottom: 30px;
+}
+
 .key-info {
   padding: 7rem 0;
   /* background: lightblue; */

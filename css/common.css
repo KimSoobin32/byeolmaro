@@ -12,6 +12,7 @@
   --bd-bright: rgba(0, 0, 0, 0.1);
   --line: #808080;
   --bd2: #afafaf;
+  --swiper-theme-color: #ffd600;
 }
 img {
   max-width: 100%;

@@ -37,4 +37,25 @@ $(function () {
       $header.addClass('hide');
     }
   });
+
+  //swiper.js
+  const visualSlider = new Swiper('.visual-slider', {
+    // Optional parameters
+    autoplay: {
+      delay: 5000,
+    },
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.btn-next',
+      prevEl: '.btn-prev',
+    },
+  });
 });
