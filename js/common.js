@@ -7,6 +7,37 @@ $(function () {
   const $submenu = $('.submenu');
   const duration = 300;
 
+  //모바일 메뉴
+  const $btnMmenu = $('.btn-m-menu');
+  const $mSubmenu = $('.m-submenu-wrap');
+  const $dim = $('.dim');
+  const $btnClose = $('.btn-close');
+  const $mGnbMenu = $('.m-gnb > li');
+  const $mGnbSubMenu = $('.m-gnb-sub');
+
+  $btnMmenu.on('click', function () {
+    // console.log('dddd');
+    $mSubmenu.addClass('active');
+    $dim.fadeIn(duration);
+  });
+  $btnClose.add($dim).on('click', function () {
+    $mSubmenu.removeClass('active');
+    $dim.fadeOut(duration);
+
+    //모바일 용 서브메뉴 초기화
+    $mGnbMenu.removeClass('on');
+    $mGnbSubMenu.stop().slideUp(duration);
+    // 열려있던거 닫음
+  });
+  //모바일용 메뉴를 클릭했을 때
+  $mGnbMenu.on('click', function () {
+    $(this).toggleClass('on');
+    $(this).siblings().removeClass('on');
+    $(this).find($mGnbSubMenu).stop().slideToggle();
+    $(this).siblings().find($mGnbSubMenu).stop().slideUp(duration);
+  });
+
+
   //메뉴 영역에 마우스가 들어오면
   $menu.on('mouseenter', function () {
     $submenu.stop().slideDown(duration);
@@ -26,7 +57,7 @@ $(function () {
 
   //마우스 휠을 조작할 때
   $window.on('wheel', function (e) {
-    console.log(e);
+    // console.log(e);
     //이벤트의 original event > wheel delta +휠올림 - 휠내림
 
     if (e.originalEvent.wheelDelta > 0) {
@@ -38,42 +69,5 @@ $(function () {
     }
   });
 
-  // swiper.js
-  const visualSlider = new Swiper('.visual-slider', {
-    autoplay: {
-      delay: 1000,
-    },
-    loop: true,
 
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.btn-next',
-      prevEl: '.btn-prev',
-    },
-  });
-
-  const reviewList = new Swiper('.review-list', {
-    loop: true,
-    slidesPerView: 'auto',
-    spaceBetween: 30,
-    // centeredSlides: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
 });

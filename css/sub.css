@@ -1,11 +1,11 @@
 .sub-visual {
   margin-top: 100px;
   height: 40rem;
-  background: #000 url(../img/sub-visual-facility.jpg) no-repeat 0 0 / cover;
+  background: url(../img/sub-visual-facility.jpg) no-repeat 0 0 / cover;
   position: relative;
 }
 .sub-visual.introduce {
-  background: #000 url(../img/introduce-visual.png) no-repeat 50% / cover;
+  background: url(../img/introduce-visual.png) no-repeat 50% / cover;
 }
 
 .sub-visual::before {

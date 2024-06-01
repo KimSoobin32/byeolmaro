@@ -415,6 +415,7 @@ header.hide {
   transition: 0.4s;
 }
 
+
 .reserve a p {
   font-weight: 500;
   font-size: 3rem;
@@ -911,7 +912,7 @@ header.hide {
   .gnb {
     display: none;
   }
-  .btn-menu {
+  .btn-m-menu {
     display: block;
     width: 5rem;
     height: 5rem;
@@ -1237,7 +1238,7 @@ header.hide {
     width: 6.3rem;
     /* height: 4.4rem; */
   }
-  .btn-menu {
+  .btn-m-menu {
     width: 3rem;
   }
   .visual-slide-item img {
