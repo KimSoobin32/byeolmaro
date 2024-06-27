@@ -415,7 +415,6 @@ header.hide {
   transition: 0.4s;
 }
 
-
 .reserve a p {
   font-weight: 500;
   font-size: 3rem;
@@ -447,7 +446,9 @@ header.hide {
   /* background: rgba(12, 10, 112, 0.7); */
   /* background: var(--main-color-dark); */
 
-  backdrop-filter: blur(5px); /* backdrop-filter는 opacity와 같이 못씀.. bg rgba값으로 줘야 함께 적용됨 */
+  backdrop-filter: blur(
+    5px
+  ); /* backdrop-filter는 opacity와 같이 못씀.. bg rgba값으로 줘야 함께 적용됨 */
 }
 
 .reserve a p strong {
@@ -485,11 +486,10 @@ header.hide {
 }
 .tab .tab-menu a:first-child {
   /* border: 1px solid #000; */
+  border: 1px solid var(--bd-bright);
   padding: 3rem 8rem;
   border-top-left-radius: 6rem;
   border-bottom-left-radius: 6rem;
-  background: var(--main-color);
-  color: var(--white);
 }
 .tab .tab-menu a:last-child {
   border: 1px solid var(--bd-bright);
@@ -499,6 +499,15 @@ header.hide {
   background: var(--white);
   color: var(--main-color-dark);
 }
+.tab .tab-menu a.active {
+  background: var(--main-color);
+  color: var(--white);
+}
+.tab-menu a:not(.active):hover {
+  background: rgba(52, 64, 202, 0.2);
+  color: var(--main-color-dark);
+}
+
 .tab-contents {
   /* background: lightcoral; */
   margin-top: 8rem;
@@ -536,7 +545,9 @@ header.hide {
   object-fit: cover;
   transition: 0.4s;
 }
-
+.tab-contents .con-list li:hover .guide-con p {
+  color: var(--main-color-dark);
+}
 .tab-contents .con-list li:hover figure img {
   transform: scale(1.1);
 }
@@ -564,6 +575,9 @@ header.hide {
   font-size: 2.2rem;
   margin-top: 7rem;
 }
+.tab-contents .con-list li:hover strong {
+  background: var(--main-color-dark);
+}
 .con-list strong {
   display: flex;
   background: var(--main-color);
@@ -576,6 +590,7 @@ header.hide {
   bottom: -4rem;
   left: 50%;
   transform: translateX(-50%);
+  transition: 0.4s;
 }
 
 .notice {
@@ -1197,6 +1212,10 @@ header.hide {
 }
 
 @media (max-width: 560px) {
+  .notice-list li:first-child::before {
+    display: none;
+  }
+
   .foot-con {
     margin-left: 0;
   }
@@ -1245,12 +1264,13 @@ header.hide {
     height: 36rem;
     object-fit: cover;
   }
-  .visual-wrap .btn.btn-prev {
+  .visual-slider-wrap .btn.btn-next {
     display: none;
   }
-  .visual-wrap .btn.btn-next {
+  .visual-slider-wrap .btn.btn-prev {
     display: none;
   }
+
   .visual-title {
     width: 30rem;
   }

@@ -37,7 +37,6 @@ $(function () {
     $(this).siblings().find($mGnbSubMenu).stop().slideUp(duration);
   });
 
-
   //메뉴 영역에 마우스가 들어오면
   $menu.on('mouseenter', function () {
     $submenu.stop().slideDown(duration);
@@ -69,5 +68,19 @@ $(function () {
     }
   });
 
+  const tabMenu = $('.use-guide .tab-menu > a');
+  const tabContents = $('.use-guide .tab-contents > div');
 
+  tabAction(0);
+
+  tabMenu.on('click', function (e) {
+    e.preventDefault();
+    const tabIdx = $(this).index();
+    tabAction(tabIdx);
+  });
+
+  function tabAction(index) {
+    tabMenu.removeClass('active').eq(index).addClass('active');
+    tabContents.hide().eq(index).show();
+  }
 });
