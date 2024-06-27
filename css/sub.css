@@ -166,6 +166,7 @@
   padding: 6.3rem 0 4rem 11.8rem;
   padding: 4.1612% 0 2.642007926023778% 7.793923381770145%;
   /* 118/1514*100 */
+  width: 50rem;
 }
 .tab-content .content h4 {
   font-weight: 600;
@@ -225,6 +226,7 @@
 .feature ul li {
   position: relative; /* 각 항목에 점을 위치시키기 위해 상대 위치 지정 */
   padding-left: 1.5rem; /* 점과 텍스트 사이 간격 조정 */
+  margin-bottom: 5px;
 }
 
 .feature ul li::before {

@@ -83,34 +83,63 @@
   <script src="./js/common.js"></script>
   <script>
     $(function () {
-      const topSlider = new Swiper('.top-slider', {
-        loop: true,
-        slidesPerView: 1,
-        loopedSlides: 9, //슬라이드 갯수와 맞추자
-        // Navigation arrows
-        navigation: {
-          nextEl: '.btn-next',
-          prevEl: '.btn-prev',
-        },
-        pagination: {
-          el: '.swiper-pagination',
-        },
+      function initializeSliders(topSliderClass, bottomSliderClass, loopedSlides) {
+        const topSlider = new Swiper(topSliderClass, {
+          loop: true,
+          slidesPerView: 1,
+          loopedSlides: loopedSlides, //슬라이드 갯수와 맞추자
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+
+        const bottomSlider = new Swiper(bottomSliderClass, {
+          loop: true,
+          slideToClickedSlide: true,
+          slidesPerView: 'auto',
+          loopedSlides: loopedSlides,
+          spaceBetween: 30,
+        });
+
+        // 두 슬라이더 연동
+        topSlider.controller.control = bottomSlider;
+        bottomSlider.controller.control = topSlider;
+      }
+
+      // 슬라이더 초기화
+      initializeSliders('.top-slider.first', '.bottom-slider.first', 9);
+      initializeSliders('.top-slider.second', '.bottom-slider.second', 6);
+
+      const tabMenu = $('.tab-menu > a');
+      const tabContent = $('.tab-content');
+
+      // 초기 세팅 - 함수의 실행
+      tabAction(0);
+
+      // 탭 메뉴를 클릭했을 때
+      tabMenu.on('click', function (e) {
+        // a의 기본 동작(링크 이동)을 막자
+        e.preventDefault();
+        // 클릭한 놈의 인덱스를 구해서 변수에 담고
+        const tabIdx = $(this).index();
+        console.log(tabIdx);
+        // 함수의 실행
+        tabAction(tabIdx);
+      });
+
+      // 공통의 동작을 함수로 정의
+      function tabAction(index) {
+        // 탭 메뉴 활성화
+        tabMenu.removeClass('active');
+        tabMenu.eq(index).addClass('active');
+
+        // 탭 콘텐츠 중에서 인덱스에 해당하는 내용을 보여지게
+        tabContent.hide();
+        tabContent.eq(index).show();
+      }
+    });
 
 
-      });
-      const bottomSlider = new Swiper('.bottom-slider', {
-        loop: true,
-        slideToClickedSlide: true,
-        //css에서 크기를 설정한 후, auto 적용
-        slidesPerView: 'auto',
-        // slidesPerView: 6,
-        loopedSlides: 9,
-        spaceBetween: 30,
-      });
-      //두 슬라이더 연동
-      topSlider.controller.control = bottomSlider;
-      bottomSlider.controller.control = topSlider;
-    })
   </script>
 </head>
 <div class="dim"></div>
@@ -266,6 +295,70 @@
         </div>
 
         <div class="tab-content">
+
+          <div class="pic">
+            <!-- 상단 -->
+            <div class="slider-wrap">
+              <div class="swiper top-slider first">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/facility1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility3.png" alt=""></div>
+
+
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+              </div>
+
+
+              <!-- 하단 -->
+              <div class="swiper bottom-slider bottom first">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/facility1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility3.png" alt=""></div>
+
+
+                </div>
+
+
+              </div>
+              <!-- <div class="swiper-pagination"></div> -->
+              <!-- <button type="button" class="btn-prev">이전</button>
+              <button type="button" class="btn-next">다음</button> -->
+            </div>
+          </div>
+          <div class="content">
+            <h4>미디어존</h4>
+
+            <div class="equipment">
+              <div class="badge-category">장비</div>
+              <ul>
+                <li>
+                  <dl>
+                    <dt>돔스크린(8.3m)</dt>
+                    <dd>최대 54명 동시 관람가능</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>천체투영기</dt>
+                    <dd>GOTO(일본)의 오르페우스(Orpheus)[하이브리드식]</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+            <div class="feature">
+              <div class="badge-category">시설특징</div>
+              <ul>
+                <li>6.55등급까지 약 9,500개의 별 표현</li>
+                <li>풀돔[Full Dome]영상 상영 가능</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="tab-content">ddd</div> -->
+        <div class="tab-content">
           <!-- <div class="pic">
             <figure><img src="./img/facility1.png" alt=""></figure>
             <div>
@@ -279,9 +372,9 @@
           <div class="pic">
             <!-- 상단 -->
             <div class="slider-wrap">
-              <div class="swiper top-slider">
+              <div class="swiper top-slider second">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="./img/facility1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/use-guide2.jpg" alt=""></div>
                   <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
                   <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
                   <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
@@ -293,9 +386,9 @@
 
 
               <!-- 하단 -->
-              <div class="swiper bottom-slider bottom">
+              <div class="swiper bottom-slider bottom second">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="./img/facility1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/use-guide2.jpg" alt=""></div>
                   <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
                   <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
                   <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
