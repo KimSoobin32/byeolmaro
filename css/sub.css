@@ -121,30 +121,31 @@
   margin-top: 13rem;
   margin-top: 8.5865%;
   margin-top: 9.5865%;
+  justify-content: center;
   /* 130/1514*100 */
 }
-.tab-content .pic {
+/* .tab-content .pic {
   width: 74rem;
   width: 48.87714663143989%;
-  /* 740/1514*100 */
-}
-.tab-content .pic figure {
-  /* height: 56.6rem; */
+} */
+/* 740/1514*100 */
+/* height: 56.6rem; */
+/* .tab-content .pic figure {
   width: 100%;
   aspect-ratio: 1/0.7648648648648649;
-  /* 566/740 */
-}
-.tab-content .pic figure img {
+} */
+/* 566/740 */
+/* .tab-content .pic figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
-.tab-content .pic div {
+/* .tab-content .pic div {
   display: flex;
   overflow: hidden;
   margin-top: 2rem;
-}
+} */
 .tab-content .pic div span {
   /* display: inline-block; */
   width: 20rem;
@@ -389,7 +390,20 @@
   font-size: 2rem;
   margin-top: 1rem;
 }
+.bottom-slider .swiper-slide {
+  width: 300px;
+}
 
+.slider-wrap .bottom .swiper-slide.swiper-slide-active {
+  border: 5px solid #ffd600;
+  border-radius: 5px;
+}
+.slider-wrap .bottom .swiper-slide.swiper-slide-active img {
+  border-radius: 0;
+}
+.slider-wrap .swiper-slide img {
+  border-radius: 5px;
+}
 /* e: pc 천문대 소개 */
 
 @media (max-width: 1514px) {
@@ -418,21 +432,22 @@
   .tab-content .pic {
     margin-top: 17.4rem;
     margin-top: 23.5135%;
-    /* 174/740*100 */
-    width: 100%;
+    margin: 23.5135% auto 0;
+    /* width: 100%; */
   }
-  .tab-content .pic figure {
+  /* 174/740*100 */
+  /* .tab-content .pic figure {
     width: 74rem;
     width: 67.64168190127971%;
     aspect-ratio: 1 / 0.7648648648648649;
     margin: 0 auto;
-  }
-  .tab-content .pic div {
+  } */
+  /* .tab-content .pic div {
     width: 74rem;
     width: 67.64168190127971%;
-    /* 740/1094*100 */
     margin: 2rem auto 0 auto;
-  }
+  } */
+  /* 740/1094*100 */
   /* e: facility */
 }
 
@@ -495,7 +510,7 @@
     margin-top: 17.4rem;
     margin-top: 23.5135%;
     /* 174/740*100 */
-    width: 100%;
+    width: 100% !important;
   }
   .equipment ul li dl dt {
     font-size: 2.3rem;
@@ -546,6 +561,12 @@
   }
 
   /* e: 천문대 소개 */
+}
+
+@media (max-width: 960px) {
+  .bottom-slider .swiper-slide {
+    width: 37%;
+  }
 }
 
 @media (max-width: 840px) {
@@ -620,9 +641,10 @@
   .tab-content .pic figure {
     width: 100%;
   }
-  .tab-content .pic div {
+  /* .tab-content .pic div {
     width: 100%;
-  }
+  } */
+
   /* e: facility */
   /* s:tablet 천문대 소개 */
   .meaning h3 {

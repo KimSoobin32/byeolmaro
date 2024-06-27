@@ -5,69 +5,171 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>시설소개 | 별마로 천문대</title>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/sub.css">
+  <script src="./js/swiper-bundle.min.js"></script>
+  <style>
+    .tab-content .pic {
+      width: 74rem;
+      /* width: 48.87714663143989%;
+      width: 50%; */
+      /* margin: 0 auto; */
+    }
+
+
+    .slider-wrap {
+      width: 100%;
+      margin: 50px auto;
+      /* border: 1px solid #000; */
+
+      /* 버튼, 페이징을 위한 기준점 */
+      position: relative;
+
+
+    }
+
+    /* 버튼은 보이고 나오는 빠져 나오는 슬라이드만 숨김 */
+    .slider-wrap .swiper {
+      overflow: hidden;
+    }
+
+    .slider-wrap button {
+      position: absolute;
+      bottom: 100px;
+      width: 70px;
+      height: 70px;
+      background: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .slider-wrap button.btn-prev {
+      left: -80px;
+    }
+
+    .slider-wrap button.btn-next {
+      right: -80px;
+    }
+
+    /* .top-slider {
+      border: 1px solid #f00;
+    }
+
+    .top-slider .swiper-slide {
+      border: 1px solid #ccc;
+    }
+
+    .bottom-slider {
+      border: 1px solid #00f;
+    }
+
+    .bottom-slider .swiper-slide {
+      border: 1px solid #ccc;
+    } */
+
+    .slider-wrap .swiper-slide.swiper-slide-active {
+      border-width: 5px;
+      font-size: 3rem;
+    }
+  </style>
   <script src="./js/jquery-3.7.1.min.js"></script>
+
+  <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/common.js"></script>
+  <script>
+    $(function () {
+      const topSlider = new Swiper('.top-slider', {
+        loop: true,
+        slidesPerView: 1,
+        loopedSlides: 9, //슬라이드 갯수와 맞추자
+        // Navigation arrows
+        navigation: {
+          nextEl: '.btn-next',
+          prevEl: '.btn-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+
+
+      });
+      const bottomSlider = new Swiper('.bottom-slider', {
+        loop: true,
+        slideToClickedSlide: true,
+        //css에서 크기를 설정한 후, auto 적용
+        slidesPerView: 'auto',
+        // slidesPerView: 6,
+        loopedSlides: 9,
+        spaceBetween: 30,
+      });
+      //두 슬라이더 연동
+      topSlider.controller.control = bottomSlider;
+      bottomSlider.controller.control = topSlider;
+    })
+  </script>
 </head>
 <div class="dim"></div>
-  <!-- 전체메뉴 : 모바일 -->
-  <div class="m-submenu-wrap">
-    <button type="button" class="btn-close"><i class="hidden">닫기</i></button>
-   
-    <ul class="m-gnb">
-      <li>
-        <strong>별마로 천문대 소개</strong>
-        <ul class="m-gnb-sub">
-          <li><a href="./introduce.html">천문대 소개</a></li>
-          <li><a href="#">오시는 길</a></li>
-         
-        </ul>
-      </li>
-      <li>
-        <strong>천문대 이용안내</strong>
-        <ul class="m-gnb-sub">
-          <li><a href="./facility.html">시설 소개</a></li>
-          <li><a href="#">이용료 안내</a></li>
-          <li><a href="#">관람 시간표</a></li>
-          <li><a href="#">이달의 별자리</a></li>
-      
-        </ul>
-      </li>
-      <li>
-        <strong>교육관 이용안내</strong>
-        <ul class="m-gnb-sub">
+<!-- 전체메뉴 : 모바일 -->
+<div class="m-submenu-wrap">
+  <button type="button" class="btn-close"><i class="hidden">닫기</i></button>
 
-          <li><a href="#">시설 소개</a></li>
-          <li><a href="#">이용 안내</a></li>
-          <li><a href="#">프로그램 소개</a></li>
-          <li><a href="#">이용객 준수사항</a></li>
+  <ul class="m-gnb">
+    <li>
+      <strong>별마로 천문대 소개</strong>
+      <ul class="m-gnb-sub">
+        <li><a href="./introduce.html">천문대 소개</a></li>
+        <li><a href="#">오시는 길</a></li>
 
-        </ul>
-      </li>
-      <li>
-        <strong>천문대 예매</strong>
-        <ul class="m-gnb-sub">
-          <li><a href="#">예매하기</a></li>
-          <li><a href="#">예매 확인/취소</a></li>
-          <li><a href="#">환불 안내</a></li>
-    
-        </ul>
-      </li>
-      <li>
-        <strong>참여마당</strong>
-        <ul class="m-gnb-sub">
-          <li><a href="#">공지사항</a></li>
-          <li><a href="#">자주하는 질문</a></li>
-          <li><a href="#">묻고답하기</a></li>
-          <li><a href="#">방문후기</a></li>
-          <li><a href="#">자유사진</a></li>
-    
-        </ul>
-      </li>
-    </ul>
-  </div>
+      </ul>
+    </li>
+    <li>
+      <strong>천문대 이용안내</strong>
+      <ul class="m-gnb-sub">
+        <li><a href="./facility.html">시설 소개</a></li>
+        <li><a href="#">이용료 안내</a></li>
+        <li><a href="#">관람 시간표</a></li>
+        <li><a href="#">이달의 별자리</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <strong>교육관 이용안내</strong>
+      <ul class="m-gnb-sub">
+
+        <li><a href="#">시설 소개</a></li>
+        <li><a href="#">이용 안내</a></li>
+        <li><a href="#">프로그램 소개</a></li>
+        <li><a href="#">이용객 준수사항</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <strong>천문대 예매</strong>
+      <ul class="m-gnb-sub">
+        <li><a href="#">예매하기</a></li>
+        <li><a href="#">예매 확인/취소</a></li>
+        <li><a href="#">환불 안내</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <strong>참여마당</strong>
+      <ul class="m-gnb-sub">
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">자주하는 질문</a></li>
+        <li><a href="#">묻고답하기</a></li>
+        <li><a href="#">방문후기</a></li>
+        <li><a href="#">자유사진</a></li>
+
+      </ul>
+    </li>
+  </ul>
+</div>
 
 <body>
   <a href="#container" class="skip hidden">본문 바로가기</a>
@@ -164,7 +266,7 @@
         </div>
 
         <div class="tab-content">
-          <div class="pic">
+          <!-- <div class="pic">
             <figure><img src="./img/facility1.png" alt=""></figure>
             <div>
               <span><img src="./img/facility2.png" alt=""></span>
@@ -173,6 +275,40 @@
               <span><img src="./img/facility2.png" alt=""></span>
             </div>
 
+          </div> -->
+          <div class="pic">
+            <!-- 상단 -->
+            <div class="slider-wrap">
+              <div class="swiper top-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/facility1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+              </div>
+
+
+              <!-- 하단 -->
+              <div class="swiper bottom-slider bottom">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/facility1.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+
+                </div>
+
+
+              </div>
+              <!-- <div class="swiper-pagination"></div> -->
+              <!-- <button type="button" class="btn-prev">이전</button>
+              <button type="button" class="btn-next">다음</button> -->
+            </div>
           </div>
           <div class="content">
             <h4>천체 투영실</h4>
@@ -261,6 +397,9 @@
       </div>
     </div>
   </footer>
+
+
+
 </body>
 
 </html>

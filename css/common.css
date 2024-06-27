@@ -186,7 +186,7 @@ header.hide {
   position: fixed;
   top: 0;
   right: 0;
-  width: 60%;
+  width: 40%;
   height: 100vh;
   background: #fff;
   z-index: 100;
@@ -226,8 +226,8 @@ header.hide {
 .m-gnb > li > strong::after {
   content: '';
   display: block;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 0.8rem;
+  height: 0.8rem;
   border: solid #000;
   border-width: 2px 2px 0 0;
   transform: rotate(135deg);
@@ -255,10 +255,8 @@ header.hide {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.m-gnb-sub li{
-  
+.m-gnb-sub li {
   border-bottom: 1px solid #fff;
-
 }
 .m-gnb-sub li a {
   display: block;
@@ -268,10 +266,10 @@ header.hide {
   height: 100%;
   padding: 1rem;
 }
-.m-gnb-sub li:hover, .m-gnb-sub li a:hover{
-  background: #2D36A5;
+.m-gnb-sub li:hover,
+.m-gnb-sub li a:hover {
+  background: #2d36a5;
   color: #fff;
-
 }
 
 /* e 모바일 메뉴 */
@@ -404,6 +402,11 @@ header.hide {
   .tel {
     margin-right: 10rem !important;
   }
+
+  .m-submenu-wrap {
+    width: 60%;
+    padding: 3vw;
+  }
 }
 
 /* 태블릿 디자인 */
@@ -412,6 +415,11 @@ header.hide {
     background-image: url(../img/tablet-logo.svg);
     width: 9.3rem;
     height: 6.6rem;
+  }
+
+  .m-submenu-wrap {
+    width: 70%;
+    padding: 6vw;
   }
 }
 
@@ -433,6 +441,10 @@ header.hide {
   }
   .sns-wrap {
     margin-left: 0;
+  }
+  .m-submenu-wrap {
+    width: 70%;
+    padding: 6vw;
   }
 }
 
