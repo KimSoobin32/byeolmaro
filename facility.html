@@ -83,17 +83,17 @@
   <script src="./js/common.js"></script>
   <script>
     $(function () {
-      function initializeSliders(topSliderClass, bottomSliderClass, loopedSlides) {
-        const topSlider = new Swiper(topSliderClass, {
+      function initializeSliders(topSliderElem, bottomSliderElem, loopedSlides) {
+        const topSlider = new Swiper(topSliderElem, {
           loop: true,
           slidesPerView: 1,
-          loopedSlides: loopedSlides, //슬라이드 갯수와 맞추자
+          loopedSlides: loopedSlides,
           pagination: {
             el: '.swiper-pagination',
           },
         });
 
-        const bottomSlider = new Swiper(bottomSliderClass, {
+        const bottomSlider = new Swiper(bottomSliderElem, {
           loop: true,
           slideToClickedSlide: true,
           slidesPerView: 'auto',
@@ -101,44 +101,35 @@
           spaceBetween: 30,
         });
 
-        // 두 슬라이더 연동
         topSlider.controller.control = bottomSlider;
         bottomSlider.controller.control = topSlider;
       }
 
-      // 슬라이더 초기화
-      initializeSliders('.top-slider.first', '.bottom-slider.first', 9);
-      initializeSliders('.top-slider.second', '.bottom-slider.second', 6);
+      $('.top-slider').each(function (index) {
+        const loopedSlides = 9; // 기본값은 9
+        const topSliderElem = this;
+        const bottomSliderElem = $('.bottom-slider').get(index);
+        initializeSliders(topSliderElem, bottomSliderElem, loopedSlides);
+      });
 
       const tabMenu = $('.tab-menu > a');
       const tabContent = $('.tab-content');
 
-      // 초기 세팅 - 함수의 실행
       tabAction(0);
 
-      // 탭 메뉴를 클릭했을 때
       tabMenu.on('click', function (e) {
-        // a의 기본 동작(링크 이동)을 막자
         e.preventDefault();
-        // 클릭한 놈의 인덱스를 구해서 변수에 담고
         const tabIdx = $(this).index();
-        console.log(tabIdx);
-        // 함수의 실행
         tabAction(tabIdx);
       });
 
-      // 공통의 동작을 함수로 정의
       function tabAction(index) {
-        // 탭 메뉴 활성화
         tabMenu.removeClass('active');
         tabMenu.eq(index).addClass('active');
-
-        // 탭 콘텐츠 중에서 인덱스에 해당하는 내용을 보여지게
         tabContent.hide();
         tabContent.eq(index).show();
       }
     });
-
 
   </script>
 </head>
@@ -329,7 +320,7 @@
             </div>
           </div>
           <div class="content">
-            <h4>미디어존</h4>
+            <h4>천체 투영실</h4>
 
             <div class="equipment">
               <div class="badge-category">장비</div>
@@ -359,16 +350,7 @@
         </div>
         <!-- <div class="tab-content">ddd</div> -->
         <div class="tab-content">
-          <!-- <div class="pic">
-            <figure><img src="./img/facility1.png" alt=""></figure>
-            <div>
-              <span><img src="./img/facility2.png" alt=""></span>
-              <span><img src="./img/facility2.png" alt=""></span>
-              <span><img src="./img/facility2.png" alt=""></span>
-              <span><img src="./img/facility2.png" alt=""></span>
-            </div>
 
-          </div> -->
           <div class="pic">
             <!-- 상단 -->
             <div class="slider-wrap">
@@ -398,27 +380,143 @@
 
 
               </div>
-              <!-- <div class="swiper-pagination"></div> -->
-              <!-- <button type="button" class="btn-prev">이전</button>
-              <button type="button" class="btn-next">다음</button> -->
+
             </div>
           </div>
           <div class="content">
-            <h4>천체 투영실</h4>
+            <h4>미디어존</h4>
 
             <div class="equipment">
               <div class="badge-category">장비</div>
               <ul>
                 <li>
                   <dl>
-                    <dt>돔스크린(8.3m)</dt>
-                    <dd>최대 54명 동시 관람가능</dd>
+                    <dt>녹스의 물결</dt>
+                    <dd>겹겹이 펼쳐진 스크린 위로 아름다운 우주 형상 감상</dd>
                   </dl>
                 </li>
                 <li>
                   <dl>
-                    <dt>천체투영기</dt>
-                    <dd>GOTO(일본)의 오르페우스(Orpheus)[하이브리드식]</dd>
+                    <dt>카오스의 틈</dt>
+                    <dd>우주의 탄생과 천체의 아름다움을 대형 프로젝터를 통해 느껴보세요.</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>에레보스의 빛</dt>
+                    <dd>거울을 통해 만들어진 무한한 공간에서 쏟아질 듯한 별들의 중심에 서보세요.</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="feature">
+              <div class="badge-category">시설특징</div>
+              <ul>
+                <li>6.55등급까지 약 9,500개의 별 표현</li>
+                <li>풀돔[Full Dome]영상 상영 가능</li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+        <div class="tab-content">
+
+          <div class="pic">
+            <!-- 상단 -->
+            <div class="slider-wrap">
+              <div class="swiper top-slider second">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/cafe9991.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+              </div>
+
+
+              <!-- 하단 -->
+              <div class="swiper bottom-slider bottom second">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/cafe9991.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+          </div>
+          <div class="content">
+            <h4>CAFE999</h4>
+
+
+            <div class="feature">
+              <div class="badge-category">시설특징</div>
+              <ul>
+                <li>CAFE799 만의 신선한 커피</li>
+                <li>아름다운 봉래산 전경을 감상 가능</li>
+                <li>위치 : 3층</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content">
+
+          <div class="pic">
+            <!-- 상단 -->
+            <div class="slider-wrap">
+              <div class="swiper top-slider second">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/facility-ju.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+              </div>
+
+
+              <!-- 하단 -->
+              <div class="swiper bottom-slider bottom second">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="./img/facility-ju.jpg" alt=""></div>
+                  <div class=" swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+                  <div class="swiper-slide"><img src="./img/facility2.png" alt=""></div>
+
+                </div>
+
+
+              </div>
+              <!-- <div class="swiper-pagination"></div> -->
+              <!-- <button type="button" class="btn-prev">이전</button>
+              <button type="button" class="btn-next">다음</button> -->
+            </div>
+          </div>
+          <div class="content">
+            <h4>천체관측실</h4>
+            <div class="equipment">
+              <div class="badge-category">장비</div>
+              <ul>
+                <li>
+                  <dl>
+                    <dt>주관측실</dt>
+                    <dd>리치크레티앙 반사망원경(800mm)</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>보조관측실</dt>
+                    <dd>8m*14m(슬라이딩 돔)</dd>
                   </dl>
                 </li>
               </ul>
@@ -426,10 +524,12 @@
             <div class="feature">
               <div class="badge-category">시설특징</div>
               <ul>
-                <li>6.55등급까지 약 9,500개의 별 표현</li>
-                <li>풀돔[Full Dome]영상 상영 가능</li>
+                <li>주간에는 태양의 흑점, 홍염 관찰</li>
+                <li>야간에는 달, 행성, 별, 성단, 성운 관찰 </li>
+
               </ul>
             </div>
+
           </div>
         </div>
       </div>
