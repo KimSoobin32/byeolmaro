@@ -178,7 +178,7 @@
 .badge-category {
   background: var(--main-color);
   /* width: 8rem; */
-  height: 4rem;
+  max-height: 4rem;
   font-weight: 700;
   font-size: 1.8rem;
   color: var(--white);
@@ -459,6 +459,16 @@
     font-size: 2rem;
   }
   /* e: facility */
+
+  .board_list .title {
+    font-size: 1.5rem;
+  }
+  .board_list .date {
+    font-size: 1.4rem !important;
+  }
+  .board_list .count {
+    font-size: 1.4rem !important;
+  }
 }
 
 @media (max-width: 1160px) {
@@ -563,6 +573,14 @@
   }
 
   /* e: 천문대 소개 */
+  /* 공지 */
+  .select-box {
+    width: 30% !important;
+  }
+  .input-container {
+    width: 70% !important;
+  }
+  /* 공지 */
 }
 
 @media (max-width: 960px) {
@@ -604,7 +622,295 @@
     margin-top: -1px;
   }
   /* e: facility */
+
+  .board_wrap .badge-category.normal {
+    color: #000;
+    border: 1px solid var(--bd);
+  }
+  .board_list > div > div {
+    text-align: left;
+    padding: 6px 0 !important;
+  }
+  .board_list > div {
+    flex-wrap: wrap;
+    /* flex: 1 1 auto; */
+    padding: 10px;
+  }
+  .board_list .num {
+    width: 80px;
+
+    order: 1;
+    flex-basis: 100%;
+    text-align: left;
+  }
+  .board_list .title {
+    width: 70%;
+    height: 30px;
+    overflow: hidden;
+    order: 2;
+    /* font-size: 1.5rem; */
+    padding-left: 0;
+  }
+  .board_list .date {
+    width: 30% !important;
+    order: 3;
+    /* font-size: 1.3rem; */
+    text-align: right;
+  }
+  .board_list .count {
+    display: none;
+  }
+  .badge-category {
+    font-size: 1.5rem !important;
+
+    padding: 0.5rem 1.5rem !important;
+  }
+  /* dddddddd */
 }
+
+/* 공지사항 */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: flex-end;
+  margin-top: 10rem;
+}
+
+.select-box {
+  padding: 10px;
+  border-radius: 50px;
+  border: 1px solid #7d7d7d;
+
+  outline: none;
+  height: 6rem;
+  width: 12rem;
+  width: 10%;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.input-box {
+  padding: 10px 40px 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #7d7d7d;
+  outline: none;
+  height: 6rem;
+  width: 100%;
+}
+
+.search-btn {
+  position: absolute;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  /* border-radius: 50%; */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-btn i {
+  display: block;
+  color: white;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  background: url(../img/search.svg) no-repeat 50% 50% / contain;
+}
+
+/* 목록 */
+.board_wrap {
+  /* width: 1000px; */
+  margin: 70px auto;
+}
+.board_wrap .badge-category {
+  margin-top: 0;
+  max-width: 8rem;
+}
+.board_wrap .badge-category.event {
+  color: var(--main-color);
+  background: #fff;
+  border: 2px solid var(--main-color);
+  padding: 1rem 1.5rem;
+}
+.board_wrap .badge-category.normal {
+  color: #666;
+  /* border: 1px solid var(--bd); */
+  background: #fff;
+  font-weight: 400;
+  /* font-size: 1rem; */
+}
+.board_title {
+  margin-bottom: 30px;
+}
+
+.board_title strong {
+  font-size: 3rem;
+}
+
+.board_title p {
+  margin-top: 5px;
+  font-size: 1.4rem;
+}
+
+.bt_wrap {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
+}
+
+.bt_wrap a {
+  display: inline-block;
+  min-width: 80px;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  font-size: 1.4rem;
+}
+
+.bt_wrap a:first-child {
+  margin-left: 0;
+}
+
+.bt_wrap a.on {
+  background: #000;
+  color: #fff;
+}
+
+.board_list {
+  width: 100%;
+  border-top: 2px solid #000;
+}
+
+.board_list > div {
+  border-bottom: 1px solid #ddd;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  /* height: 10rem; */
+}
+
+.board_list > div.top {
+  border-bottom: 1px solid #999;
+}
+
+.board_list > div:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.board_list > div > div {
+  display: inline-block;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.board_list > div.top > div {
+  font-weight: 600;
+}
+
+.board_list .num {
+  width: 10%;
+}
+
+.board_list .title {
+  width: 70%;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.board_list .top .title {
+  text-align: center;
+}
+
+.board_list .writer {
+  width: 10%;
+}
+
+.board_list .date {
+  width: 10%;
+  font-size: 1.8rem;
+}
+
+.board_list .count {
+  width: 10%;
+  font-size: 1.8rem;
+}
+
+.board_page {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.board_page .num {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  /* border: 1px solid #ddd; */
+  border-left: 0;
+  line-height: 100%;
+}
+.page-btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.board_page a.bt {
+  /* padding-top: 10px; */
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+
+  display: flex;
+  align-items: center;
+}
+
+.board_page a.num {
+  padding-top: 9px;
+  font-size: 1.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0px;
+}
+
+.board_page a.num.on {
+  /* border-color: #000; */
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 50%;
+}
+
+/* .badge-category {
+  font-size: 1.3rem;
+  height: 2.8rem;
+  padding: 0.6rem 1.5rem;
+} */
+
+/* .board_page a:first-child {
+  border-left: 1px solid #ddd;
+} */
+
+/* e 공지사항 860 */
 
 /* 모바일 */
 /* @media (max-width: 400px) { */
@@ -702,6 +1008,42 @@
     height: 4.6rem;
   }
   /* e:tablet 천문대 소개 */
+  .board_wrap .badge-category.normal {
+    color: #000;
+    border: 1px solid var(--bd);
+  }
+  .board_list > div > div {
+    text-align: left;
+    padding: 6px 0;
+  }
+  .board_list > div {
+    flex-wrap: wrap;
+    /* flex: 1 1 auto; */
+    padding: 10px;
+  }
+  .board_list .num {
+    width: 80px;
+
+    order: 1;
+    flex-basis: 100%;
+  }
+  .board_list .title {
+    width: 70%;
+    height: 30px;
+    overflow: hidden;
+    order: 2;
+    font-size: 1.5rem;
+    padding-left: 0;
+  }
+  .board_list .date {
+    width: 30%;
+    order: 3;
+    font-size: 1.3rem;
+    text-align: right;
+  }
+  .board_list .count {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {

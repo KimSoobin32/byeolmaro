@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>천문대 소개 | 별마로 천문대</title>
+  <title>공지사항 | 별마로 천문대</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/common.css">
@@ -98,7 +98,7 @@
             </ul>
           </li>
           <li>
-            <a href="#"><b>교육관 이용안내</b></a>
+            <a href="./facility.html"><b>교육관 이용안내</b></a>
             <ul class="submenu">
               <li><a href="./facility.html">시설 소개</a></li>
               <li><a href="#">이용 안내</a></li>
@@ -116,7 +116,7 @@
             </ul>
           </li>
           <li>
-            <a href="#"><b>참여마당</b></a>
+            <a href="./notice.html"><b>참여마당</b></a>
             <ul class="submenu">
               <li><a href="./notice.html">공지사항</a></li>
               <li><a href="#">자주하는 질문</a></li>
@@ -137,8 +137,10 @@
   <main id="container">
     <!-- s: 비주얼 영역 -->
     <section class="sub-visual introduce">
+
+
       <div class="sub-title">
-        <h2>천문대 소개</h2>
+        <h2>공지사항</h2>
       </div>
     </section>
     <!-- //e: 비주얼 영역 -->
@@ -146,87 +148,155 @@
       <div class="inner">
         <ul>
           <li><a href="/" class="home-icon"><i class="hidden">홈</i></a></li>
-          <li><a href="#">별마로 천문대 소개</a></li>
-          <li><a href="#">천문대 소개</a></li>
+          <li><a href="#">참여마당</a></li>
+          <li><a href="#">공지사항</a></li>
         </ul>
       </div>
     </div>
 
-    <section class="meaning">
+    <section class="board">
       <div class="inner">
-        <h3>별을 보는 고요한 정상</h3>
-        <figure data-aos="fade-up"><img src="./img/meaning.JPG" alt=""></figure>
-        <p data-aos="fade-up">별마로는 별 + 마루(정상) + 𡂕(고요할 로)의 합성어로 '별을 보는 고요한 정상' 이라는 뜻입니다.</p>
+        <div class="container">
+          <select class="select-box">
+            <option value="">전체</option>
+            <option value="">제목</option>
+            <option value="">내용</option>
+
+          </select>
+          <div class="input-container">
+            <input type="text" class="input-box" placeholder="검색어를 입력해주세요.">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="board_wrap">
+
+          <div class="board_list_wrap">
+            <div class="board_list">
+              <!-- <div class="top">
+                <div class="num">번호</div>
+                <div class="title">제목</div>
+                <div class="writer">글쓴이</div>
+                <div class="date">작성일</div>
+                <div class="count">조회</div>
+              </div> -->
+              <div>
+                <div class="num">
+                  <div class="badge-category">공지</div>
+                </div>
+                <div class="title"><a href="#">별마로천문대 차량 진입 통제로 인한 셔틀버스 운행 안내</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">4004</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category">공지</div>
+                </div>
+                <div class="title"><a href="#">별마로천문대 2024년 6월 온라인 예매 및 휴관일 안내</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">676</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category">공지</div>
+                </div>
+                <div class="title"><a href="#">별마로천문대 2024년 6월 온라인 예매 및 휴관일 안내</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">676</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category normal">일반</div>
+                </div>
+                <div class="title"><a href="#">온라인 예매 시 안내사항</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">29439</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category normal">일반</div>
+                </div>
+                <div class="title"><a href="#">별마로천문대 2024년 3월, 4월 온라인 예매 및 휴관일 안내</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">29439</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category normal">일반</div>
+                </div>
+                <div class="title"><a href="#">별마로천문대 하절기 운영 안내</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">29439</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category normal">일반</div>
+                </div>
+                <div class="title"><a href="#">별마로천문대 2024년 2월 온라인 예매 및 휴관일 안내</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">29439</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category normal">일반</div>
+                </div>
+                <div class="title"><a href="#">[긴급] 예매 오류 현상 - 복구 완료</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">29439</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category event">이벤트</div>
+                </div>
+                <div class="title"><a href="#">2023 별마로천문대 대한민국 밤밤곡곡 100 선정 SNS 이벤트</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">29439</div>
+              </div>
+              <div>
+                <div class="num">
+                  <div class="badge-category normal">일반</div>
+                </div>
+                <div class="title"><a href="#">별마로천문대 임시휴관 안내(1월 9일)</a></div>
+
+                <div class="date">2024-03-06</div>
+                <div class="count">29439</div>
+              </div>
+
+            </div>
+            <div class="board_page">
+              <div class="page-btn-wrap prev">
+                <a href="#" class="bt first">
+                  <img src="./img/page-prev-first.svg" alt="first"> </a>
+                <a href="#" class="bt prev">
+                  <img src="./img/page-prev.svg" alt="prev"> </a>
+              </div>
+              <a href="#" class="num on">1</a>
+              <a href="#" class="num">2</a>
+              <a href="#" class="num">3</a>
+              <a href="#" class="num">4</a>
+              <a href="#" class="num">5</a>
+              <div class="page-btn-wrap next">
+                <a href="#" class="bt next"><img src="./img/page-next.svg" alt="next"></a>
+                <a href="#" class="bt last"><img src="./img/page-next-last.svg" alt="last"></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="speciality">
-      <div class="inner">
-        <h3 data-aos="fade-up">별마로 천문대 만의 특별함!</h3>
-        <article data-aos="fade-up">
-          <div class="pic">
-            <figure><img src="./img/introduce-telescope1.jpg" alt=""></figure>
-          </div>
-          <div class="con">
-            <h4>시민천문대 최상의 관측조건</h4>
-            <p>
-              해발 799.8m에 자리하고 있으며, 지름 800mm 주망원경과
-              여러대의 보조망원경이 설치되어 있어 달이나 행성, 별을 관측할 수 있습니다.
-            </p>
-          </div>
 
-        </article>
 
-        <article data-aos="fade-up">
-          <div class="pic">
-            <figure><img src="./img/introduce-observatory.jpeg" alt=""></figure>
-          </div>
-          <div class="con">
-            <h4>천문 이외의 아름다움</h4>
-            <p>
-              천문대가 위치한 봉래산 정상에는 활공장이 있어 넓은 시야로
-              풍경을 감상할 수 있으며 산 정상에서 내려다 보는 영월읍내
-              야경도 천체관측과 함께 색다른 즐거움을 제공합니다.
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
 
-    <section class="state">
-      <div class="inner">
-        <h3 class="sec-title" data-aos="fade-up">별마로 천문대 현황</h3>
-        <figure data-aos="fade-up"><img src="./img/reserve.jpg" alt=""></figure>
-        <ul class="key-info-list" data-aos="fade-up">
-          <li>
-            <dl>
-              <dt>위치</dt>
-              <dd>강원특별자치도 영월군 영월읍<br>
-                천문대길 397</dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt>개관일자</dt>
-              <dd>2001년 10월 31일</dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt>면적</dt>
-              <dd>대지면적: 4,058m²<br>
-                건물면적: 931m²</dd>
-            </dl>
-          </li>
-          <li>
-            <dl>
-              <dt>건축규모</dt>
-              <dd>지하2층, 지상4층</dd>
-            </dl>
-          </li>
-        </ul>
-      </div>
-    </section>
 
 
   </main>
