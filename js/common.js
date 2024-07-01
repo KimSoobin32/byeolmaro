@@ -83,4 +83,35 @@ $(function () {
     tabMenu.removeClass('active').eq(index).addClass('active');
     tabContents.hide().eq(index).show();
   }
+
+  $('.custom-select').click(function () {
+    if ($('.custom-options').css('display') === 'none') {
+      $('.custom-options')
+        .css('display', 'block')
+        .css('animation', 'slideDown 0.3s forwards ease-out');
+    } else {
+      $('.custom-options').css('animation', 'slideUp 0.3s forwards ease-out');
+      setTimeout(function () {
+        $('.custom-options').css('display', 'none');
+      }, 300); // Adjust to match the duration of the slideUp animation
+    }
+  });
+
+  $('.custom-option').click(function () {
+    var value = $(this).data('value');
+    $('.custom-select').text($(this).text());
+    $('.custom-options').css('animation', 'slideUp 0.3s forwards ease-out');
+    setTimeout(function () {
+      $('.custom-options').css('display', 'none');
+    }, 300); // Adjust to match the duration of the slideUp animation
+  });
+
+  $(document).click(function (e) {
+    if (!$(e.target).closest('.custom-select-wrapper').length) {
+      $('.custom-options').css('animation', 'slideUp 0.3s forwards ease-out');
+      setTimeout(function () {
+        $('.custom-options').css('display', 'none');
+      }, 300); // Adjust to match the duration of the slideUp animation
+    }
+  });
 });

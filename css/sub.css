@@ -665,6 +665,18 @@
 
     padding: 0.5rem 1.5rem !important;
   }
+
+  .board_page {
+    gap: 15px !important;
+  }
+  .page-btn-wrap {
+    gap: 15px !important;
+  }
+  .board_page a.num {
+    /* flex-shrink: 0; */
+    width: 40px !important;
+    height: 40px !important;
+  }
   /* dddddddd */
 }
 
@@ -687,6 +699,82 @@
   width: 12rem;
   width: 10%;
 }
+/* custom selbox */
+.custom-select-wrapper {
+  position: relative;
+  width: 200px;
+}
+
+.custom-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #7d7d7d;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #fff;
+  height: 6rem;
+}
+
+.custom-select::after {
+  content: '▼';
+
+  position: absolute;
+  right: 20px;
+  pointer-events: none;
+}
+
+.custom-options {
+  margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #7d7d7d;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1;
+  opacity: 0;
+  overflow: hidden;
+  animation: slideDown 0.3s forwards ease-out;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+}
+
+.custom-option {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.custom-option:hover {
+  background-color: #f0f0f0;
+}
+
+/* e custom selbox */
 
 .input-container {
   position: relative;
@@ -800,6 +888,10 @@
   display: flex;
   align-items: center;
   /* height: 10rem; */
+  transition: 0.2s;
+}
+.board_list > div:hover {
+  background: rgba(52, 64, 202, 0.2);
 }
 
 .board_list > div.top {
@@ -858,16 +950,6 @@
   gap: 30px;
 }
 
-.board_page .num {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
-  vertical-align: middle;
-  /* border: 1px solid #ddd; */
-  border-left: 0;
-  line-height: 100%;
-}
 .page-btn-wrap {
   display: flex;
   align-items: center;
@@ -884,6 +966,16 @@
 }
 
 .board_page a.num {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-left: 0;
+  line-height: 100%;
+
+  flex-shrink: 0;
+
   padding-top: 9px;
   font-size: 1.8rem;
 
@@ -891,6 +983,8 @@
   align-items: center;
   justify-content: center;
   padding-top: 0px;
+
+  flex-shrink: 0; /* 크기가 줄어들지 않도록 설정 */
 }
 
 .board_page a.num.on {
