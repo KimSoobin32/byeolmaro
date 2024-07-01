@@ -84,34 +84,33 @@ $(function () {
     tabContents.hide().eq(index).show();
   }
 
+  // Toggle the custom select options
   $('.custom-select').click(function () {
-    if ($('.custom-options').css('display') === 'none') {
-      $('.custom-options')
-        .css('display', 'block')
-        .css('animation', 'slideDown 0.3s forwards ease-out');
+    var $customOptions = $('.custom-options');
+    var $arrowIcon = $('.arrow-icon');
+
+    if ($customOptions.css('display') === 'none') {
+      $customOptions.css('display', 'block');
+      $arrowIcon.css('transform', 'rotate(180deg)');
     } else {
-      $('.custom-options').css('animation', 'slideUp 0.3s forwards ease-out');
-      setTimeout(function () {
-        $('.custom-options').css('display', 'none');
-      }, 300); // Adjust to match the duration of the slideUp animation
+      $customOptions.css('display', 'none');
+      $arrowIcon.css('transform', 'rotate(0deg)');
     }
   });
 
+  // Update the selected option
   $('.custom-option').click(function () {
     var value = $(this).data('value');
-    $('.custom-select').text($(this).text());
-    $('.custom-options').css('animation', 'slideUp 0.3s forwards ease-out');
-    setTimeout(function () {
-      $('.custom-options').css('display', 'none');
-    }, 300); // Adjust to match the duration of the slideUp animation
+    $('.selected-option').text($(this).text()); // Update .selected-option text
+    $('.custom-options').css('display', 'none');
+    $('.arrow-icon').css('transform', 'rotate(0deg)');
   });
 
+  // Close the custom select if clicked outside
   $(document).click(function (e) {
     if (!$(e.target).closest('.custom-select-wrapper').length) {
-      $('.custom-options').css('animation', 'slideUp 0.3s forwards ease-out');
-      setTimeout(function () {
-        $('.custom-options').css('display', 'none');
-      }, 300); // Adjust to match the duration of the slideUp animation
+      $('.custom-options').css('display', 'none');
+      $('.arrow-icon').css('transform', 'rotate(0deg)');
     }
   });
 });

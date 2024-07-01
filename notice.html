@@ -158,11 +158,18 @@
       <div class="inner">
         <div class="container">
           <div class="custom-select-wrapper">
-            <div class="custom-select">전체</div>
+            <!-- <div class="custom-select">
+              전체
+              <img class="arrow-icon" src="./img/arrow-down.svg" alt="arrow">
+            </div> -->
+            <div class="custom-select">
+              <span class="selected-option">전체</span>
+              <img class="arrow-icon" src="./img/arrow-down.svg" alt="arrow">
+            </div>
             <div class="custom-options">
-              <div class="custom-option" value="">전체</div>
-              <div class="custom-option" value="">제목</div>
-              <div class="custom-option" value="">내용</div>
+              <div class="custom-option" data-value="전체">전체</div>
+              <div class="custom-option" data-value="제목">제목</div>
+              <div class="custom-option" data-value="내용">내용</div>
             </div>
           </div>
           <!-- <select class="select-box">

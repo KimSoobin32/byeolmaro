@@ -709,6 +709,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 20px;
   border: 1px solid #7d7d7d;
   border-radius: 50px;
@@ -716,14 +717,19 @@
   background-color: #fff;
   height: 6rem;
 }
-
-.custom-select::after {
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+/* .custom-select::after {
   content: '▼';
 
   position: absolute;
   right: 20px;
   pointer-events: none;
-}
+} */
 
 .custom-options {
   margin-top: 10px;
@@ -772,6 +778,8 @@
 
 .custom-option:hover {
   background-color: #f0f0f0;
+  background-color: rgba(52, 64, 202, 0.1);
+  border-radius: 0;
 }
 
 /* e custom selbox */
