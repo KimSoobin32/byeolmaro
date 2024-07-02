@@ -70,7 +70,7 @@ $(function () {
       //브라우저 창 크기가 1200px 이상일 때
       900: {
         slidesPerView: 2.5,
-        spaceBetween: 70,
+        spaceBetween: 71,
       },
     },
   });
