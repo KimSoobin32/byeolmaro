@@ -408,6 +408,213 @@
 }
 /* e: pc 천문대 소개 */
 
+/* s 예약 */
+/* 예약 */
+.reservation {
+  margin-top: 24.5rem;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.reservation .container {
+  width: 100%;
+}
+
+/* ---------- CALENDAR ---------- */
+
+.calendar {
+  text-align: center;
+}
+
+.calendar .cal-mon {
+  position: relative;
+}
+
+.calendar h2 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.note {
+  margin-bottom: 15rem;
+}
+
+.calendar thead {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.calendar tbody {
+  color: #7c8a95;
+}
+
+.calendar tr {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar .day td {
+  height: 5rem;
+  border: none;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.calendar td {
+  border: 2px solid transparent;
+  display: inline-block;
+  width: 17rem;
+  height: 14rem;
+  padding: 1.5rem;
+  width: 11%;
+  text-align: left;
+  border-radius: 25px;
+  position: relative;
+}
+
+.calendar .prev-month,
+.calendar .next-month {
+  color: #cbd1d2;
+  border: 1px solid #7d7d7d;
+  border: 1px solid #cbd1d2;
+}
+
+.able {
+  background: var(--main-color);
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s;
+}
+.able:hover {
+  background: var(--main-color-dark);
+}
+
+.able:hover .hover-text {
+  display: block;
+}
+
+.hover-text {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.close {
+  position: relative;
+  background: #ebecfa;
+}
+
+.calendar td.holi {
+  background: #ededed;
+  border: none;
+  position: relative;
+}
+
+.calendar td.holi::after {
+  content: '휴관일';
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.able.current-day:after {
+  background: #f9f9f9;
+}
+
+.btn-prev,
+.btn-next {
+  border: 2px solid #cbd1d2;
+  border-radius: 50%;
+  color: #cbd1d2;
+  height: 2em;
+  font-size: 0.75em;
+  line-height: 2em;
+  margin: -1em;
+  position: absolute;
+  top: 50%;
+  width: 2em;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background: #cbd1d2;
+  color: #f9f9f9;
+}
+
+.btn-prev {
+  left: 6em;
+}
+
+.btn-next {
+  right: 6em;
+}
+
+/* .reservation .cal-state {
+  margin-top: 10rem;
+  margin-bottom: 60rem;
+  display: flex;
+  margin-left: 10%;
+} */
+.reservation .cal-state {
+  margin-top: 10rem;
+  margin-bottom: 60rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.cal-state li {
+  position: relative;
+  padding-left: 3rem;
+  list-style: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.cal-state li::before {
+  content: '';
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.state-available::before {
+  background-color: var(--main-color);
+}
+
+.state-closed::before {
+  background-color: #ebecfa;
+}
+
+.state-holiday::before {
+  background-color: #ededed;
+}
+
+/* e 예약 */
+
 @media (max-width: 1514px) {
   /* s: facility */
   .tab-content {
@@ -581,6 +788,19 @@
     width: 70% !important;
   }
   /* 공지 */
+  /* 예약 t */
+  .calendar td {
+    padding: 1.5rem;
+    /* width: 10%; */
+    padding: 10px 0;
+    height: 10rem;
+    /* width: 8rem;
+    height: 8rem; */
+    text-align: center;
+    /* width: 4em; */
+    /* border: 1px solid #000; */
+  }
+  /* 예약 t */
 }
 
 @media (max-width: 960px) {
@@ -678,10 +898,32 @@
     height: 40px !important;
   }
   /* dddddddd */
+  /* 예약 m */
+  .calendar td.holi::after {
+    display: none;
+  }
+  .hover-text {
+    display: none !important;
+  }
+  .calendar td {
+    /* padding: 1.5rem; */
+    padding: 0;
+    width: 6rem;
+
+    height: 6rem;
+    /* width: 8rem;
+        height: 8rem; */
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  /* 예약 m */
 }
 
 /* 공지사항 */
-.container {
+.board .container {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -1014,6 +1256,27 @@
 
 /* e 공지사항 860 */
 
+@media (max-width: 700px) {
+  /* 예약 m */
+  .calendar tr {
+    gap: 3px;
+  }
+  .calendar td {
+    /* padding: 1.5rem; */
+    padding: 0;
+    width: 5rem;
+    /* padding: 10px 0; */
+    height: 5rem;
+    /* width: 8rem;
+        height: 8rem; */
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* 예약 m */
+}
+
 /* 모바일 */
 /* @media (max-width: 400px) { */
 @media (max-width: 500px) {
@@ -1146,9 +1409,39 @@
   .board_list .count {
     display: none;
   }
+  /* 예약 m */
+  .calendar td {
+    /* padding: 1.5rem; */
+    padding: 0;
+    width: 5rem;
+    /* padding: 10px 0; */
+    height: 5rem;
+    /* width: 8rem;
+      height: 8rem; */
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* 예약 m */
 }
 
 @media (max-width: 400px) {
+  /* 예약 m */
+  .calendar td {
+    /* padding: 1.5rem; */
+    padding: 0;
+    width: 4rem;
+    /* padding: 10px 0; */
+    height: 4rem;
+    /* width: 8rem;
+        height: 8rem; */
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* 예약 m */
 }
 
 @media (max-width: 390px) {
