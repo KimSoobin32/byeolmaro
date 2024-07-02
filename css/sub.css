@@ -7,6 +7,12 @@
 .sub-visual.introduce {
   background: url(../img/introduce-visual.png) no-repeat 50% / cover;
 }
+.sub-visual.reserve {
+  background: url(../img/reservation-visual.jpg) no-repeat 50% / cover;
+}
+.sub-visual.notice {
+  background: url(../img/notice-visual.jpg) no-repeat 50% / cover;
+}
 
 .sub-visual::before {
   content: '';
@@ -412,6 +418,7 @@
 /* 예약 */
 .reservation {
   margin-top: 24.5rem;
+  margin-top: 10%;
 }
 table {
   border-collapse: collapse;
@@ -421,16 +428,19 @@ table {
 
 .reservation .container {
   width: 100%;
+  text-align: center;
 }
 
 /* ---------- CALENDAR ---------- */
 
-.calendar {
+/* .calendar {
   text-align: center;
-}
+} */
 
 .calendar .cal-mon {
+  width: 60%;
   position: relative;
+  margin: 0 auto;
 }
 
 .calendar h2 {
@@ -439,7 +449,18 @@ table {
 }
 
 .note {
-  margin-bottom: 15rem;
+  margin-bottom: 5%;
+  margin-top: 3%;
+  font-size: 2.5rem;
+}
+.note b {
+  color: #f00;
+  font-weight: 600;
+}
+.note.choose {
+  display: none;
+  margin-bottom: 7%;
+  font-weight: 600;
 }
 
 .calendar thead {
@@ -543,28 +564,33 @@ table {
 .btn-next {
   border: 2px solid #cbd1d2;
   border-radius: 50%;
-  color: #cbd1d2;
-  height: 2em;
-  font-size: 0.75em;
-  line-height: 2em;
-  margin: -1em;
+  /* color: #cbd1d2; */
+
+  /* font-size: 0.75em; */
+  /* line-height: 2em;
+  margin: -1em; */
   position: absolute;
   top: 50%;
-  width: 2em;
+  transform: translateY(-50%);
+  width: 5rem;
+  height: 5rem;
 }
 
-.btn-prev:hover,
+/* .btn-prev:hover,
 .btn-next:hover {
-  background: #cbd1d2;
-  color: #f9f9f9;
-}
+  background-color: rgba(52, 64, 202, 0.2);
+
+  color: white;
+} */
 
 .btn-prev {
-  left: 6em;
+  left: 0;
+  background: url(../img/prev-black.svg) no-repeat 50% / contain;
 }
 
 .btn-next {
-  right: 6em;
+  right: 0;
+  background: url(../img/next-black.svg) no-repeat 50% / contain;
 }
 
 /* .reservation .cal-state {
@@ -575,7 +601,8 @@ table {
 } */
 .reservation .cal-state {
   margin-top: 10rem;
-  margin-bottom: 60rem;
+  margin-top: 6%;
+  margin-bottom: 30%;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -789,6 +816,34 @@ table {
   }
   /* 공지 */
   /* 예약 t */
+  .note {
+    font-size: 2rem;
+  }
+  .calendar h2 {
+    font-size: 4rem;
+  }
+  .cal-state li {
+    position: relative;
+    padding-left: 2.5rem;
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .cal-state li::before {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hover-text {
+    font-size: 1.5rem;
+  }
   .calendar td {
     padding: 1.5rem;
     /* width: 10%; */
@@ -899,6 +954,14 @@ table {
   }
   /* dddddddd */
   /* 예약 m */
+  .btn-prev,
+  .btn-next {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .note.choose {
+    display: block;
+  }
   .calendar td.holi::after {
     display: none;
   }
@@ -1258,6 +1321,12 @@ table {
 
 @media (max-width: 700px) {
   /* 예약 m */
+  .note {
+    font-size: 1.5rem;
+  }
+  .calendar h2 {
+    font-size: 3rem;
+  }
   .calendar tr {
     gap: 3px;
   }
@@ -1274,6 +1343,7 @@ table {
     justify-content: center;
     align-items: center;
   }
+
   /* 예약 m */
 }
 
@@ -1410,6 +1480,9 @@ table {
     display: none;
   }
   /* 예약 m */
+  .calendar h2 {
+    font-size: 3rem;
+  }
   .calendar td {
     /* padding: 1.5rem; */
     padding: 0;
