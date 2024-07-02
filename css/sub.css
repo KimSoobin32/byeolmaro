@@ -703,6 +703,11 @@ table {
   .board_list .count {
     font-size: 1.4rem !important;
   }
+  .badge-category {
+    font-size: 1.5rem !important;
+    padding: 0.3rem 1.5rem !important;
+    height: 2.8rem;
+  }
 }
 
 @media (max-width: 1160px) {
