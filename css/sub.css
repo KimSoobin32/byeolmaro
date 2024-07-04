@@ -1328,6 +1328,17 @@ table {
 /* e 공지사항 860 */
 
 @media (max-width: 700px) {
+  /* 공지 m*/
+  .board .container {
+    display: block;
+  }
+  .input-container {
+    width: 100% !important;
+  }
+  .custom-select {
+    display: none;
+  }
+  /* 공지 m*/
   /* 예약 m */
   .note {
     font-size: 1.5rem;
