@@ -172,7 +172,7 @@
   padding: 6.3rem 0 4rem 11.8rem;
   padding: 4.1612% 0 2.642007926023778% 7.793923381770145%;
   /* 118/1514*100 */
-  width: 50rem;
+  /* width: 50rem; */
 }
 .tab-content .content h4 {
   font-weight: 600;
@@ -605,7 +605,7 @@ table {
   margin-bottom: 30%;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .cal-state li {
@@ -986,6 +986,9 @@ table {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+  }
+  .calendar td.holi {
+    color: #f00;
   }
   /* 예약 m */
 }
@@ -1501,6 +1504,9 @@ table {
     justify-content: center;
     align-items: center;
   }
+  .reservation .cal-state {
+    gap: 2rem;
+  }
   /* 예약 m */
 }
 
@@ -1518,6 +1524,14 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .btn-prev {
+    left: -30px;
+  }
+
+  .btn-next {
+    right: -30px;
   }
   /* 예약 m */
 }
