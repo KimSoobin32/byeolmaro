@@ -606,6 +606,10 @@ header.hide {
   margin-left: 10%;
 }
 
+.swiper-container-horizontal > .swiper-scrollbar {
+  display: none;
+}
+
 .notice-slider .swiper-slide {
   font-size: 5vw;
   height: 400px;
