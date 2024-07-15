@@ -596,7 +596,7 @@ header.hide {
 .notice-slider-wrap {
   /* width: 1200px; */
   height: 500px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   margin: 50px auto;
 
   overflow: hidden;
